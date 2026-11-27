@@ -1,137 +1,58 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountainview Accounting | Financial Precision</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { bg: '#050505', accentAcc: '#4C1D95', muted: '#888888', border: '#222222' }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="text/javascript">
-        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MountainView Accounting — Technical Accounting & Compliance</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="relative min-h-screen selection:bg-brand-accentAcc selection:text-white flex flex-col overflow-hidden">
-
-    <div class="bg-grid"></div>
-    
-    <!-- ACCOUNTING AMBIENT LIGHT -->
-    <div class="ambient-light light-purple"></div>
-
-    <nav class="fixed w-full top-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-brand-border px-6 py-5 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 group z-50">
-            <img src="logo.jpg" alt="MountainView Group Logo" class="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
-            <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-        </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-            <a href="who-we-are.html" class="text-brand-muted hover:text-white transition-colors">The Firm</a>
-            <a href="services.html" class="text-white transition-colors">Our Services</a>
-            <a href="technologies.html" class="text-brand-muted hover:text-white transition-colors">Technologies</a>
-            <a href="contact.html" class="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300">Contact Us</a>
-        </div>
-        <button id="hamburger" class="md:hidden z-50 flex flex-col gap-1.5 w-8">
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-            <span class="block h-[2px] w-3/4 bg-white rounded-full ml-auto"></span>
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-        </button>
-    </nav>
-
-    <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-[#050505] z-40 flex flex-col justify-center items-center">
-        <button id="close-menu" class="absolute top-6 right-6 text-5xl text-brand-muted hover:text-white">&times;</button>
-        <div class="flex flex-col items-center gap-6 text-center">
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-white hover:text-gray-300 transition-colors">The Firm</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">Our Services</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-accentAcc hover:text-white transition-colors">MountainView Accounting</a>
-            <a href="technologies.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">MountainView Technologies</a>
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">A message from the Group Chief Executive</a>
-            <a href="contact.html" class="mobile-link mt-6 bg-white text-black px-12 py-4 rounded-full font-bold text-xl">Contact us</a>
-        </div>
-    </div>
-
-    <main class="flex-grow pt-40 pb-24 px-6 max-w-7xl mx-auto w-full relative z-10">
-        
-        <div class="reveal mb-20">
-            <p class="text-brand-accentAcc font-mono text-sm tracking-widest mb-6 uppercase">// DIVISION 01</p>
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-8 text-white">
-                Financial<br>Precision.
-            </h1>
-            <p class="text-brand-muted text-xl font-light max-w-2xl">
-                Institutional-grade accounting, technical advisory, and compliance for Small and Medium Enterprises and Non-Profit Organisations.
-            </p>
-        </div>
-
-        <div class="reveal grid md:grid-cols-2 gap-8 mb-20 relative z-10">
-            <div class="bg-[#0a0a0a] border border-brand-border p-10 rounded-2xl hover:border-brand-accentAcc/50 transition-colors duration-500">
-                <h3 class="text-2xl font-bold mb-4 text-white">Technical Accounting & Reporting</h3>
-                <p class="text-brand-muted mb-6">Accurate, real-time financial data. We maintain your ledgers and prepare IFRS-compliant financial statements so you always know exactly where you stand.</p>
-            </div>
-            <div class="bg-[#0a0a0a] border border-brand-border p-10 rounded-2xl hover:border-brand-accentAcc/50 transition-colors duration-500">
-                <h3 class="text-2xl font-bold mb-4 text-white">Tax & Statutory Compliance</h3>
-                <p class="text-brand-muted mb-6">Proactive tax planning and meticulous SARS submissions. Provisional tax, income tax returns, and VAT. We ensure you meet every deadline.</p>
-            </div>
-            <div class="bg-[#0a0a0a] border border-brand-border p-10 rounded-2xl hover:border-brand-accentAcc/50 transition-colors duration-500">
-                <h3 class="text-2xl font-bold mb-4 text-white">NGO Fund Accounting</h3>
-                <p class="text-brand-muted mb-6">Specialized reporting for the non-profit sector. Tracking donor funds, compliance with NPO regulations, and transparent board reporting.</p>
-            </div>
-            <div class="bg-[#0a0a0a] border border-brand-border p-10 rounded-2xl hover:border-brand-accentAcc/50 transition-colors duration-500">
-                <h3 class="text-2xl font-bold mb-4 text-white">Board Advisory & Strategy</h3>
-                <p class="text-brand-muted mb-6">We bring years of board-level experience to your organisation. From strategic financial planning to project coordination and corporate governance.</p>
-            </div>
-        </div>
-
-        <div class="reveal text-center bg-[#0a0a0a] border border-brand-border p-12 rounded-3xl relative overflow-hidden">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-accentAcc rounded-full filter blur-[150px] opacity-20 pointer-events-none"></div>
-            <h3 class="text-3xl font-bold mb-4 relative z-10 text-white">Need a financial partner?</h3>
-            <p class="text-brand-muted mb-8 relative z-10">Let's discuss how our technical accounting and advisory services can secure your foundation.</p>
-            <a href="contact.html" class="relative z-10 inline-block bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-brand-accentAcc hover:text-white transition-colors duration-300">Consult with Accounting</a>
-        </div>
-
-    </main>
-
-    <footer class="border-t border-brand-border bg-[#020202] pt-20 pb-10 px-6 mt-auto relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="index.html" class="flex items-center gap-3 mb-6">
-                        <img src="logo.jpg" alt="MountainView Group Logo" class="h-8 w-auto object-contain">
-                        <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-                    </a>
-                    <p class="text-brand-muted text-sm max-w-sm">The holding entity for Mountainview Accounting and Mountainview Technologies. Precision for SMEs and NGOs in South Africa.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Divisions</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Mountainview Accounting</a></li>
-                        <li><a href="technologies.html" class="hover:text-white transition-colors">Mountainview Technologies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="who-we-are.html" class="hover:text-white transition-colors">The Firm</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="login.html" class="hover:text-white transition-colors">Client Portal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-brand-muted text-xs">Copyright Mountainview Group 2026</p>
-                <p class="text-brand-muted text-xs">Designed for precision.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<body class="font-body antialiased">
+<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div></div>
+<header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+<a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+<a href="who-we-are.html" class="hover:text-white">Who We Are</a>
+<a href="services.html" class="text-white">Accounting</a>
+<a href="technologies.html" class="hover:text-white">Technologies</a>
+<a href="smes-ngos.html" class="hover:text-white">SMEs & NGOs</a>
+<a href="contact.html" class="bg-white text-black px-5 py-2.5 rounded-full font-semibold btn">Start a Project</a>
+</nav>
+<button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center border border-line rounded-full" aria-label="Open menu"><div class="space-y-1.5"><div class="w-5 h-[2px] bg-white"></div><div class="w-5 h-[2px] bg-white"></div></div></button>
+</header>
+<div id="overlay" class="fixed inset-0 z-30 bg-white text-black flex flex-col justify-center px-8">
+<button id="closeBtn" class="absolute top-5 right-5 w-11 h-11 border border-black/20 rounded-full text-2xl leading-none">&times;</button>
+<a href="index.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Home</a>
+<a href="who-we-are.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Who We Are</a>
+<a href="services.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-accounting">Accounting</a>
+<a href="technologies.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-tech">Technologies</a>
+<a href="smes-ngos.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">SMEs & NGOs</a>
+<a href="contact.html" class="font-display font-extrabold text-4xl py-3">Contact</a>
+</div>
+<main class="relative z-10">
+<section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-12">
+<p class="reveal text-xs tracking-[0.3em] text-purple-300 uppercase">MountainView Accounting • Division 01</p>
+<h1 class="reveal font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[5.5rem] mt-5">ABSOLUTE<br>PRECISION.</h1>
+<p class="reveal max-w-xl text-zinc-400 mt-6 leading-relaxed">Technical accounting, SARS compliance, NGO fund accounting, and board advisory. Built for organisations that cannot afford guesswork.</p>
+<div class="reveal flex flex-wrap gap-3 mt-8"><a href="contact.html" class="btn bg-accounting px-7 py-3.5 rounded-full font-semibold">Book a Consultation →</a><a href="smes-ngos.html" class="btn border border-line px-7 py-3.5 rounded-full">For SMEs & NGOs</a></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20 grid md:grid-cols-2 gap-5">
+<div class="reveal card card-acct border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-purple-300 uppercase">01</span><h2 class="font-display font-extrabold text-2xl mt-3">Technical Accounting & Reporting</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Monthly bookkeeping, management accounts, annual financial statements, and reconciliations — clean, on time, and audit-ready.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Monthly Management Accounts</li><li>— Annual Financial Statements</li><li>— Bank & Control Reconciliations</li><li>— Budgeting & Cash Flow</li></ul></div>
+<div class="reveal card card-acct border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-purple-300 uppercase">02</span><h2 class="font-display font-extrabold text-2xl mt-3">SARS Compliance & Tax</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">VAT, PAYE, provisional tax, and income tax — filed correctly, filed on time, with no surprises.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— VAT Returns & Reconciliations</li><li>— PAYE / EMP201 / EMP501</li><li>— Provisional Tax (IRP6)</li><li>— SARS Queries & Objections</li></ul></div>
+<div class="reveal card card-acct border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-purple-300 uppercase">03</span><h2 class="font-display font-extrabold text-2xl mt-3">NGO Fund Accounting</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Donor funds tracked separately, reported transparently, and ready for audit. Funders trust clean fund accounting.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Donor / Grant Fund Tracking</li><li>— Donor Reporting Packs</li><li>— NPO Compliance</li><li>— Audit Preparation</li></ul></div>
+<div class="reveal card card-acct border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-purple-300 uppercase">04</span><h2 class="font-display font-extrabold text-2xl mt-3">Board & Governance Advisory</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Board packs, governance frameworks, and financial insight for decision-makers — not just historical numbers.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Board Packs & Reporting</li><li>— Governance & Controls</li><li>— Financial Analysis</li><li>— Strategic Advisory</li></ul></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20">
+<div class="reveal bg-accounting rounded-3xl p-7 md:p-10 md:flex md:items-center justify-between gap-8"><div><h3 class="font-display font-extrabold text-2xl md:text-3xl">Your books should tell the truth. Ours do.</h3><p class="text-purple-200 mt-2 text-sm">Unfiltered honesty. Absolute precision. No guesswork.</p></div><a href="contact.html" class="btn bg-white text-black px-7 py-3.5 rounded-full font-semibold whitespace-nowrap mt-5 md:mt-0 inline-block">Get a Quote →</a></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-24">
+<div class="reveal border border-line rounded-3xl p-8 text-center bg-[#0A0A0A]"><h3 class="font-display font-extrabold text-2xl md:text-3xl">Need tech with your finance?</h3><p class="text-zinc-400 mt-2">Your accounting is only as good as the system behind it.</p><a href="technologies.html" class="btn bg-tech px-7 py-3.5 rounded-full font-semibold inline-block mt-5">See Technologies →</a></div>
+</section>
+</main>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
