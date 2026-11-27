@@ -1,39 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const reveals = document.querySelectorAll('.reveal');
-    const revealOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-        });
-    }, revealOptions);
-
-    reveals.forEach(reveal => {
-        revealOnScroll.observe(reveal);
-    });
-
-    const hamburger = document.getElementById('hamburger');
-    const closeBtn = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    if(hamburger) {
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-        });
-    }
-
-    const closeMenu = () => {
-        if(mobileMenu) mobileMenu.classList.remove('active');
-    };
-
-    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
+// script.js
+document.addEventListener('DOMContentLoaded',()=>{
+const overlay=document.getElementById('overlay');
+const menuBtn=document.getElementById('menuBtn');
+const closeBtn=document.getElementById('closeBtn');
+if(menuBtn&&overlay)menuBtn.onclick=()=>overlay.classList.add('open');
+if(closeBtn&&overlay)closeBtn.onclick=()=>overlay.classList.remove('open');
+if(overlay)overlay.querySelectorAll('a').forEach(a=>a.onclick=()=>overlay.classList.remove('open'));
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 });
