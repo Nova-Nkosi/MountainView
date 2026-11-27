@@ -1,8 +1,75 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Who We Are | MountainView Group</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a href="index.html"><img src="logo.jpg" alt="MountainView Group"></a><button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button><nav id="menu"><a href="who-we-are.html">Who We Are</a><a href="services.html">Services</a><a href="smes-ngos.html">For SMEs & NGOs</a><a href="contact.html" class="btn">Contact Us</a></nav></div></header>
-<section><div class="container"><div class="eyebrow">WHO WE ARE</div><h2>A boutique firm that knows your name.</h2><p class="sub">MountainView Group is a boutique full-service accounting firm in South Africa, primarily serving small to medium enterprises and NGOs.</p><div class="split" style="margin-top:30px"><div><h3>What boutique means</h3><p>Personal service. You don't get passed around. You get a team that understands small business and NGO realities — tight budgets, funder deadlines, SARS pressure, and the need for clear numbers.</p><h3 style="margin-top:20px">What we believe</h3><p>Good accounting is not just compliance. It's clarity. When your numbers are clean, you can plan, apply for funding, win tenders, and grow with confidence.</p></div><div class="team-box"><h3>Our Team</h3><p>MountainView Group is run by a dedicated team. When you work with us, you work with a firm — with systems, checks and support — not a single person juggling everything.</p><p style="margin-top:14px"><b>Location:</b> South Africa<br><b>Focus:</b> SMEs & NGOs</p></div></div></div></section>
-<section class="dark"><div class="container"><h2>Who we serve</h2><div class="grid"><div class="card"><h3>Small to Medium Enterprises</h3><p>Businesses that need reliable books, tax compliance, and practical admin support to grow.</p></div><div class="card"><h3>NGOs & Non-Profits</h3><p>Organisations that need grant reporting, pre-audit readiness, and financial statements funders can trust.</p></div></div></div></section>
-<footer><div class="container foot-grid"><div><b>MOUNTAINVIEW GROUP</b><p>Boutique accounting firm in South Africa.</p></div><div><b>Menu</b><p><a href="index.html">Home</a><br><a href="who-we-are.html">Who We Are</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p></div><div><b>Contact</b><p>South Africa<br>mountainviewsa.co.za</p></div></div><div class="container small">© 2026 MountainView Group</div></footer>
-<script>document.addEventListener('click',e=>{if(!e.target.closest('header'))document.getElementById('menu').classList.remove('open')})</script></body></html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Firm | MountainView Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { black: '#121212', offblack: '#1a1a1a', purple: '#4C1D95', purplehover: '#6D28D9', gray: '#a3a3a3' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <script type="text/javascript">
+        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    </script>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full top-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 px-[5%] py-5 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+            <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="who-we-are.html" class="text-brand-purple font-semibold transition-colors duration-300">The Firm</a>
+            <a href="smes-ngos.html" class="hover:text-brand-purple transition-colors duration-300">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="hover:text-brand-purple transition-colors duration-300">NGO Compliance</a>
+            <a href="services.html" class="hover:text-brand-purple transition-colors duration-300">Client Solutions</a>
+            <a href="services.html#digital" class="hover:text-brand-purple transition-colors duration-300">Digital & Web</a>
+            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
+        </div>
+        <button id="hamburger-btn" class="md:hidden z-50 flex flex-col gap-1.5 w-8"><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-400 ease-in-out">
+        <button id="close-btn" class="absolute top-6 right-[5%] text-5xl text-white hover:text-brand-purple">&times;</button>
+        <div class="flex flex-col items-center gap-6">
+            <a href="who-we-are.html" class="mobile-link text-3xl font-semibold text-brand-purple">The Firm</a>
+            <a href="smes-ngos.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="mobile-link text-3xl font-semibold hover:text-brand-purple">NGO Compliance</a>
+            <a href="services.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">Client Solutions</a>
+            <a href="services.html#digital" class="mobile-link text-3xl font-semibold hover:text-brand-purple">Digital & Web</a>
+            <a href="contact.html" class="mobile-link mt-4 bg-brand-purple text-white px-10 py-4 rounded-full font-bold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="pt-40 pb-24 px-[5%] max-w-4xl mx-auto">
+        <p class="text-brand-purple font-semibold tracking-[2px] text-sm mb-6 uppercase">THE FIRM</p>
+        <h1 class="text-5xl md:text-6xl font-bold mb-8">A premium approach to financial clarity.</h1>
+        <div class="prose prose-invert prose-lg text-brand-gray max-w-none">
+            <p class="mb-6">MountainView Group was founded on a simple principle: businesses and non-profits deserve the same calibre of financial precision and strategic advice as large corporates, without the bureaucracy.</p>
+            <p class="mb-6">We operate as a boutique practice. This means we don't treat you like a ticket number. We work closely with a select group of clients, ensuring absolute accuracy in your reporting, proactive compliance with SARS regulations, and forward-thinking financial strategy.</p>
+            <p>Whether you are scaling an SME or driving the mission of an NGO, we provide the infrastructure you need to operate with complete confidence.</p>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-16 px-[5%] text-center border-t border-white/10 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+            </div>
+            <p class="text-brand-gray text-sm">&copy; 2024 MountainView Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn'); const closeBtn = document.getElementById('close-btn'); const mobileMenu = document.getElementById('mobile-menu'); const mobileLinks = document.querySelectorAll('.mobile-link');
+        hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.remove('opacity-0', 'invisible'); mobileMenu.classList.add('opacity-100', 'visible'); });
+        const closeMenu = () => { mobileMenu.classList.remove('opacity-100', 'visible'); mobileMenu.classList.add('opacity-0', 'invisible'); };
+        closeBtn.addEventListener('click', closeMenu); mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>
