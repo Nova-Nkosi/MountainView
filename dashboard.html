@@ -22,13 +22,11 @@
 <body class="bg-brand-bg text-white font-sans antialiased min-h-screen relative">
     
     <div class="bg-grid"></div>
+    <div class="ambient-light light-white" style="bottom: 0; right: 0; width: 400px; height: 400px; opacity: 0.05;"></div>
 
-    <header class="bg-[#0a0a0a] border-b border-brand-border px-8 py-5 flex justify-between items-center relative z-10">
+    <header class="bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-brand-border px-8 py-5 flex justify-between items-center relative z-10">
         <div class="flex items-center gap-3">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 10L90 90H10L50 10Z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
-                <path d="M50 40L70 80H30L50 40Z" fill="white"/>
-            </svg>
+            <img src="logo.jpg" alt="MountainView Group Logo" class="h-8 w-auto object-contain">
             <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">Client Portal</span>
         </div>
         <div class="flex items-center gap-6">
@@ -39,15 +37,15 @@
     <main class="p-8 max-w-6xl mx-auto relative z-10">
         <h1 class="text-3xl font-bold mb-8 text-white">Welcome, Client Name</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-[#0a0a0a] p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
+            <div class="bg-[#0a0a0a]/80 backdrop-blur-sm p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
                 <h3 class="text-brand-muted text-sm font-semibold mb-2 uppercase tracking-wider font-mono">Latest Financials</h3>
                 <p class="text-2xl font-bold text-white">View Report</p>
             </div>
-            <div class="bg-[#0a0a0a] p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
+            <div class="bg-[#0a0a0a]/80 backdrop-blur-sm p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
                 <h3 class="text-brand-muted text-sm font-semibold mb-2 uppercase tracking-wider font-mono">Tax Deadlines</h3>
                 <p class="text-2xl font-bold text-white">No upcoming</p>
             </div>
-            <div class="bg-[#0a0a0a] p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
+            <div class="bg-[#0a0a0a]/80 backdrop-blur-sm p-6 rounded-xl border border-brand-border hover:border-white/30 transition-colors">
                 <h3 class="text-brand-muted text-sm font-semibold mb-2 uppercase tracking-wider font-mono">Support</h3>
                 <p class="text-2xl font-bold text-white">Open Ticket</p>
             </div>
