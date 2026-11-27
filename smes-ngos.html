@@ -1,8 +1,91 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For SMEs & NGOs | MountainView Group</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a href="index.html"><img src="logo.jpg" alt="MountainView Group"></a><button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button><nav id="menu"><a href="who-we-are.html">Who We Are</a><a href="services.html">Services</a><a href="smes-ngos.html">For SMEs & NGOs</a><a href="contact.html" class="btn">Contact Us</a></nav></div></header>
-<section><div class="container"><div class="eyebrow">WHO WE SERVE</div><h2>Built for SMEs & NGOs.</h2><p class="sub">Two different worlds. One firm that understands both.</p></div></section>
-<section class="dark"><div class="container split"><div><h2>For SMEs</h2><p>You run the business. We run the numbers.</p><ul style="margin-top:14px;line-height:2"><li>Bookkeeping & Financial Statements</li><li>SARS & Tax Compliance</li><li>Budget Coaching & Inventory</li><li>Admin & Database Support</li><li>Tender Budgets</li></ul><a href="contact.html" class="btn" style="margin-top:18px">Enquire for Your Business</a></div><div><h2>For NGOs</h2><p>You run the mission. We keep the compliance.</p><ul style="margin-top:14px;line-height:2"><li>Grant Reporting</li><li>Pre-Audit Checks</li><li>Financial Statements for Funders</li><li>Budget Coaching</li><li>Database Management</li></ul><a href="contact.html" class="btn" style="margin-top:18px">Enquire for Your NGO</a></div></div></section>
-<footer><div class="container foot-grid"><div><b>MOUNTAINVIEW GROUP</b><p>Boutique accounting firm in South Africa.</p></div><div><b>Menu</b><p><a href="index.html">Home</a><br><a href="who-we-are.html">Who We Are</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p></div><div><b>Contact</b><p>South Africa<br>mountainviewsa.co.za</p></div></div><div class="container small">© 2026 MountainView Group</div></footer>
-<script>document.addEventListener('click',e=>{if(!e.target.closest('header'))document.getElementById('menu').classList.remove('open')})</script></body></html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME & NGO Advisory | MountainView Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { black: '#121212', offblack: '#1a1a1a', purple: '#4C1D95', purplehover: '#6D28D9', gray: '#a3a3a3' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <script type="text/javascript">
+        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    </script>
+    <style>
+        .watermark-bg { background-image: url('logo.jpg'); background-size: contain; background-repeat: no-repeat; background-position: right center; opacity: 0.03; }
+    </style>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full top-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 px-[5%] py-5 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+            <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="who-we-are.html" class="hover:text-brand-purple transition-colors duration-300">The Firm</a>
+            <a href="smes-ngos.html" class="text-brand-purple font-semibold transition-colors duration-300">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="text-brand-purple font-semibold transition-colors duration-300">NGO Compliance</a>
+            <a href="services.html" class="hover:text-brand-purple transition-colors duration-300">Client Solutions</a>
+            <a href="services.html#digital" class="hover:text-brand-purple transition-colors duration-300">Digital & Web</a>
+            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
+        </div>
+        <button id="hamburger-btn" class="md:hidden z-50 flex flex-col gap-1.5 w-8"><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-400 ease-in-out">
+        <button id="close-btn" class="absolute top-6 right-[5%] text-5xl text-white hover:text-brand-purple">&times;</button>
+        <div class="flex flex-col items-center gap-6">
+            <a href="who-we-are.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">The Firm</a>
+            <a href="smes-ngos.html" class="mobile-link text-3xl font-semibold text-brand-purple">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="mobile-link text-3xl font-semibold text-brand-purple">NGO Compliance</a>
+            <a href="services.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">Client Solutions</a>
+            <a href="services.html#digital" class="mobile-link text-3xl font-semibold hover:text-brand-purple">Digital & Web</a>
+            <a href="contact.html" class="mobile-link mt-4 bg-brand-purple text-white px-10 py-4 rounded-full font-bold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="pt-40 pb-20 px-[5%] max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-6">Tailored for your structure.</h1>
+    </section>
+
+    <section class="py-24 px-[5%] bg-brand-black border-t border-white/5">
+        <div class="max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Enterprises & SMEs</h2>
+            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">Build your business on a solid financial foundation.</h3>
+            <p class="text-lg text-brand-gray mb-8 max-w-3xl">From day-to-day bookkeeping to strategic tax planning and payroll, we provide the financial infrastructure your business needs to grow with confidence. No jargon. Just accurate, actionable financial data.</p>
+            <a href="contact.html" class="inline-block border-2 border-white hover:border-brand-purple hover:text-brand-purple px-8 py-3 rounded-full font-bold transition-all duration-300">Request SME Advisory &rarr;</a>
+        </div>
+    </section>
+
+    <section id="ngo-section" class="py-24 px-[5%] bg-brand-offblack relative overflow-hidden">
+        <div class="absolute inset-0 watermark-bg z-0"></div>
+        <div class="relative z-10 max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Non-Profit Organisations</h2>
+            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">You run the mission. We protect the compliance.</h3>
+            <p class="text-lg text-brand-gray mb-8 max-w-3xl">The non-profit sector demands absolute transparency. We handle your fund accounting, donor reporting, and NPO regulatory compliance so your board has complete peace of mind and your team can focus on impact.</p>
+            <a href="contact.html" class="inline-block bg-brand-purple hover:bg-brand-purplehover text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-brand-purple/30">Request NGO Compliance &rarr;</a>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-16 px-[5%] text-center border-t border-white/10 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+            </div>
+            <p class="text-brand-gray text-sm">&copy; 2024 MountainView Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn'); const closeBtn = document.getElementById('close-btn'); const mobileMenu = document.getElementById('mobile-menu'); const mobileLinks = document.querySelectorAll('.mobile-link');
+        hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.remove('opacity-0', 'invisible'); mobileMenu.classList.add('opacity-100', 'visible'); });
+        const closeMenu = () => { mobileMenu.classList.remove('opacity-100', 'visible'); mobileMenu.classList.add('opacity-0', 'invisible'); };
+        closeBtn.addEventListener('click', closeMenu); mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>
