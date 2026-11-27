@@ -1,10 +1,9 @@
-<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — MountainView Group</title>
+<title>Contact - MountainView Group</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,48 +13,30 @@
 <div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
 <header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
 <a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
-<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
-<a href="who-we-are.html" class="hover:text-white">Who We Are</a>
-<a href="services.html" class="hover:text-white">Accounting</a>
-<a href="technologies.html" class="hover:text-white">Technologies</a>
-<a href="smes-ngos.html" class="hover:text-white">SMEs & NGOs</a>
-<a href="contact.html" class="bg-white text-black px-5 py-2.5 rounded-full font-semibold btn">Start a Project</a>
-</nav>
-<button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center border border-line rounded-full" aria-label="Open menu"><div class="space-y-1.5"><div class="w-5 h-[2px] bg-white"></div><div class="w-5 h-[2px] bg-white"></div></div></button>
+<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-400"><a href="index.html">Home</a><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html" class="text-white">Contact</a></nav>
+<a href="login.html" class="hidden md:inline-flex border border-line px-5 py-2.5 rounded-full text-sm">Client Login</a>
+<button id="menuBtn" class="md:hidden text-2xl px-2">Menu</button>
 </header>
-<div id="overlay" class="fixed inset-0 z-30 bg-white text-black flex flex-col justify-center px-8">
-<button id="closeBtn" class="absolute top-5 right-5 w-11 h-11 border border-black/20 rounded-full text-2xl leading-none">&times;</button>
-<a href="index.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Home</a>
-<a href="who-we-are.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Who We Are</a>
-<a href="services.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-accounting">Accounting</a>
-<a href="technologies.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-tech">Technologies</a>
-<a href="smes-ngos.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">SMEs & NGOs</a>
-<a href="contact.html" class="font-display font-extrabold text-4xl py-3">Contact</a>
-</div>
-<main class="relative z-10">
-<section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-12">
-<p class="reveal text-xs tracking-[0.3em] text-zinc-400 uppercase">Lead Generation • Response Within 1 Business Day</p>
-<h1 class="reveal font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[5.5rem] mt-5">LET'S BUILD<br>YOUR<br><span class="text-zinc-500">INFRASTRUCTURE.</span></h1>
-<p class="reveal max-w-xl text-zinc-400 mt-6 leading-relaxed">One conversation. Finance + Tech, aligned. Tell us what you need and we will map the next step.</p>
-</section>
-<section class="max-w-7xl mx-auto px-5 md:px-8 pb-24 grid md:grid-cols-[1fr_1.2fr] gap-6 items-start">
-<div class="reveal space-y-5">
-<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h2 class="font-display font-bold text-xl">What happens next?</h2><ol class="mt-4 space-y-3 text-sm text-zinc-300"><li><strong class="text-white">1. You send the form.</strong> 2 minutes.</li><li><strong class="text-white">2. We review.</strong> Your numbers + your systems.</li><li><strong class="text-white">3. We reply.</strong> Within 1 business day with a clear next step.</li></ol></div>
-<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h2 class="font-display font-bold text-xl">Prefer direct?</h2><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Johannesburg, South Africa<br>Serving SMEs, NGOs & Enterprise clients nationally.</p><div class="flex flex-wrap gap-3 mt-5"><a href="services.html" class="btn bg-accounting px-5 py-2.5 rounded-full text-sm font-semibold">Accounting</a><a href="technologies.html" class="btn bg-tech px-5 py-2.5 rounded-full text-sm font-semibold">Technologies</a></div></div>
-</div>
-<div class="reveal border border-line rounded-3xl p-6 md:p-8 bg-[#0A0A0A]">
-<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-5">
-<div class="grid md:grid-cols-2 gap-5"><div><label for="name">Full Name *</label><input id="name" name="name" required placeholder="Your name"></div><div><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="you@company.co.za"></div></div>
-<div class="grid md:grid-cols-2 gap-5"><div><label for="org">Organisation</label><input id="org" name="organisation" placeholder="Company / NGO name"></div><div><label for="type">Organisation Type</label><select id="type" name="organisation_type"><option>SME</option><option>NGO / NPO</option><option>Enterprise</option><option>Other</option></select></div></div>
-<div><label for="service">I need help with *</label><select id="service" name="service" required><option>Accounting — Monthly / Compliance</option><option>Accounting — NGO Fund Accounting</option><option>Accounting — Board / Advisory</option><option>Technologies — Website / Web Architecture</option><option>Technologies — Full-Stack / Portal</option><option>Technologies — Systems Integration</option><option>Both — Integrated Finance + Tech</option></select></div>
-<div><label for="message">Tell us about your project *</label><textarea id="message" name="message" rows="5" required placeholder="What are you trying to fix, build, or scale?"></textarea></div>
-<button type="submit" class="btn w-full bg-white text-black py-4 rounded-full font-semibold">Send Message →</button>
-<p class="text-xs text-zinc-500 text-center">Secure via Formspree. Your details are never shared.</p>
+<div id="overlay" class="fixed inset-0 z-50 bg-black/95 p-6 flex-col"><div class="flex justify-between items-center"><span class="font-display font-black text-xl">MOUNTAINVIEW GROUP</span><button id="closeBtn" class="text-3xl">X</button></div><nav class="flex flex-col gap-5 mt-10 text-2xl font-display font-bold"><a href="index.html">Home</a><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html" class="text-zinc-400 text-lg mt-4">Client Login</a></nav></div>
+<main class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-24">
+<p class="text-xs tracking-[0.3em] text-zinc-400 uppercase reveal">Contact</p>
+<h1 class="font-display font-black text-4xl md:text-6xl mt-3 reveal">Tell us what<br>you need.</h1>
+<p class="text-zinc-400 mt-4 max-w-xl reveal">We reply within 1 business day. Choose Accounting or Technologies so we route you to the right team.</p>
+<div class="grid md:grid-cols-2 gap-6 mt-10">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="border border-line rounded-3xl p-7 bg-[#0A0A0A] space-y-5 reveal">
+<div><label>Full Name</label><input name="name" required placeholder="Your name"></div>
+<div><label>Email</label><input name="email" type="email" required placeholder="you@company.co.za"></div>
+<div><label>Service Needed</label><select name="service"><option>Accounting</option><option>Technologies</option><option>Both</option></select></div>
+<div><label>Message</label><textarea name="message" required placeholder="Tell us about your business, your books, or your website..."></textarea></div>
+<button type="submit" class="btn w-full bg-white text-black py-4 rounded-full font-semibold">Send Message</button>
 </form>
+<div class="space-y-5 reveal">
+<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">What happens next?</h3><p class="text-zinc-400 text-sm mt-2 leading-relaxed">1. We read your request.<br>2. We send a tailored quote.<br>3. You approve, we start.</p></div>
+<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Good to know</h3><p class="text-zinc-400 text-sm mt-2">South Africa based. We work with SMEs, NGOs, and growing businesses nationwide.</p></div>
 </div>
-</section>
+</div>
 </main>
-<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
