@@ -1,153 +1,71 @@
+<!-- who-we-are.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Firm | MountainView Group</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { bg: '#050505', muted: '#888888', border: '#222222' }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="text/javascript">
-        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-    </script>
-    <style>
-        .editorial-quote { font-family: 'Georgia', serif; font-style: italic; line-height: 1.8; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are — MountainView Group</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="relative min-h-screen selection:bg-white selection:text-black flex flex-col overflow-hidden">
-
-    <div class="bg-grid"></div>
-    <div class="ambient-light light-white" style="top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05;"></div>
-
-    <nav class="fixed w-full top-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-brand-border px-6 py-5 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 group z-50">
-            <img src="logo.jpg" alt="MountainView Group Logo" class="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
-            <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-        </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-            <a href="who-we-are.html" class="text-white transition-colors">The Firm</a>
-            <a href="services.html" class="text-brand-muted hover:text-white transition-colors">Our Services</a>
-            <a href="technologies.html" class="text-brand-muted hover:text-white transition-colors">Technologies</a>
-            <a href="contact.html" class="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300">Contact Us</a>
-        </div>
-        <button id="hamburger" class="md:hidden z-50 flex flex-col gap-1.5 w-8">
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-            <span class="block h-[2px] w-3/4 bg-white rounded-full ml-auto"></span>
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-        </button>
-    </nav>
-
-    <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-[#050505] z-40 flex flex-col justify-center items-center">
-        <button id="close-menu" class="absolute top-6 right-6 text-5xl text-brand-muted hover:text-white">&times;</button>
-        <div class="flex flex-col items-center gap-6 text-center">
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-white hover:text-gray-300 transition-colors">The Firm</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">Our Services</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">MountainView Accounting</a>
-            <a href="technologies.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">MountainView Technologies</a>
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">A message from the Group Chief Executive</a>
-            <a href="contact.html" class="mobile-link mt-6 bg-white text-black px-12 py-4 rounded-full font-bold text-xl">Contact us</a>
-        </div>
-    </div>
-
-    <main class="flex-grow pt-40 pb-24 px-6 max-w-5xl mx-auto w-full relative z-10">
-        
-        <div class="reveal mb-20 text-center md:text-left">
-            <p class="text-brand-muted font-mono text-sm tracking-widest mb-6 uppercase">// The Firm</p>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-white">
-                Strategic<br>Oversight.
-            </h1>
-            <p class="text-brand-muted text-xl font-light max-w-2xl">
-                MountainView Group oversees a portfolio of companies dedicated to financial and technological excellence.
-            </p>
-        </div>
-
-        <div class="reveal bg-[#0a0a0a] border border-brand-border rounded-2xl p-8 md:p-16 relative overflow-hidden mb-20 shadow-2xl">
-            <div class="relative z-10 max-w-3xl mx-auto">
-                <h2 class="text-sm font-mono text-brand-muted tracking-widest uppercase mb-10 flex items-center gap-3">
-                    <span class="w-12 h-[1px] bg-white"></span>
-                    A Message from the Group Chief Executive
-                </h2>
-                
-                <div class="space-y-6 text-brand-muted text-xl editorial-quote">
-                    <p class="text-white font-medium">
-                        "To run a modern enterprise, you need more than just a calculator; you need a holistic understanding of how finance, operations, and technology intersect.
-                    </p>
-                    <p>
-                        My background is rooted in project coordination, technical accounting, and sitting on the boards of companies and NGOs that strive to make a tangible mark. Through that experience, I recognized a systemic flaw: brilliant organisations were being held back because their financial advisors didn't understand their technology, and their tech teams didn't understand their financial constraints.
-                    </p>
-                    <p>
-                        I built MountainView Group to solve this. By structuring Mountainview Accounting and Mountainview Technologies under one holding entity, we provide a unified approach to your operational health.
-                    </p>
-                    <p class="text-white">
-                        We bring institutional-grade financial rigor and elite digital infrastructure together. We do not just balance your books or build your software; we engineer the quiet, unshakable foundation that allows you to breathe, scale, and make an impact.
-                    </p>
-                    <p>
-                        My promise to you is absolute precision, unfiltered honesty, and the relentless energy of a group that refuses to accept the status quo.
-                    </p>
-                    <p class="text-white">
-                        Let us build something enduring."
-                    </p>
-                </div>
-
-                <!-- UPDATED SIGN-OFF -->
-                <div class="mt-12 pt-8 border-t border-brand-border flex items-center gap-6">
-                    <div class="w-16 h-16 rounded-full bg-[#1a1a1a] border border-brand-border flex items-center justify-center text-white font-bold text-2xl">
-                        NN
-                    </div>
-                    <div>
-                        <p class="text-white font-bold text-lg tracking-wide">Nhlakanipho Nkosi</p>
-                        <p class="text-brand-muted text-sm font-mono tracking-wide">Managing Partner and Group Chief Executive</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="border-t border-brand-border bg-[#020202] pt-20 pb-10 px-6 mt-auto relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="index.html" class="flex items-center gap-3 mb-6">
-                        <img src="logo.jpg" alt="MountainView Group Logo" class="h-8 w-auto object-contain">
-                        <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-                    </a>
-                    <p class="text-brand-muted text-sm max-w-sm">The holding entity for Mountainview Accounting and Mountainview Technologies. Precision for SMEs and NGOs in South Africa.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Divisions</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Mountainview Accounting</a></li>
-                        <li><a href="technologies.html" class="hover:text-white transition-colors">Mountainview Technologies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="who-we-are.html" class="hover:text-white transition-colors">The Firm</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="login.html" class="hover:text-white transition-colors">Client Portal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-brand-muted text-xs">Copyright Mountainview Group 2026</p>
-                <p class="text-brand-muted text-xs">Designed for precision.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<body class="font-body antialiased">
+<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+<a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+<a href="who-we-are.html" class="text-white">Who We Are</a>
+<a href="services.html" class="hover:text-white">Accounting</a>
+<a href="technologies.html" class="hover:text-white">Technologies</a>
+<a href="smes-ngos.html" class="hover:text-white">SMEs & NGOs</a>
+<a href="contact.html" class="bg-white text-black px-5 py-2.5 rounded-full font-semibold btn">Start a Project</a>
+</nav>
+<button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center border border-line rounded-full" aria-label="Open menu"><div class="space-y-1.5"><div class="w-5 h-[2px] bg-white"></div><div class="w-5 h-[2px] bg-white"></div></div></button>
+</header>
+<div id="overlay" class="fixed inset-0 z-30 bg-white text-black flex flex-col justify-center px-8">
+<button id="closeBtn" class="absolute top-5 right-5 w-11 h-11 border border-black/20 rounded-full text-2xl leading-none">&times;</button>
+<a href="index.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Home</a>
+<a href="who-we-are.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Who We Are</a>
+<a href="services.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-accounting">Accounting</a>
+<a href="technologies.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-tech">Technologies</a>
+<a href="smes-ngos.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">SMEs & NGOs</a>
+<a href="contact.html" class="font-display font-extrabold text-4xl py-3">Contact</a>
+</div>
+<main class="relative z-10">
+<section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-12">
+<p class="reveal text-xs tracking-[0.3em] text-zinc-400 uppercase">The Firm</p>
+<h1 class="reveal font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[5.5rem] mt-5">THE FIRM<br><span class="text-zinc-500">BEHIND THE</span><br>VISION.</h1>
+<p class="reveal max-w-xl text-zinc-400 mt-6 leading-relaxed">MountainView Group was built on a simple observation: finance and technology were being treated as separate problems. They are not. They are one infrastructure.</p>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20">
+<div class="reveal bg-white text-black rounded-3xl p-7 md:p-12">
+<p class="text-xs tracking-[0.25em] uppercase text-zinc-500">Message From The Managing Partner</p>
+<h2 class="font-display font-extrabold text-3xl md:text-4xl mt-4 leading-tight">They say you need decades of experience...<br>I disagree.</h2>
+<div class="font-editorial text-lg md:text-xl leading-relaxed text-zinc-800 mt-8 space-y-6 max-w-4xl">
+<p>“I started MountainView Group because I kept watching the same failure repeat itself. A business would hire an accountant who did not understand systems. Then it would hire a developer who did not understand finance. In the middle, money was lost, reports were late, and decisions were made on guesswork.”</p>
+<p>“Our position is different. We do not separate the numbers from the infrastructure that produces them. We build the system, we run the accounting, and we advise the board — as one team, with one standard: absolute precision.”</p>
+<p>“If you want a firm that tells you what you want to hear, we are not that firm. If you want unfiltered honesty, clean books, and technology that actually works, then we should talk.”</p>
+</div>
+<div class="mt-10 flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-black/10 pt-8">
+<div><p class="font-display font-bold text-xl">Nhlakanipho Nkosi</p><p class="text-sm text-zinc-500">Managing Partner & Group Chief Executive</p><p class="text-sm text-zinc-500">Project Coordination • Technical Accounting • Board-Level Governance</p></div>
+<a href="contact.html" class="btn bg-black text-white px-7 py-3.5 rounded-full font-semibold text-center">Work With Us →</a>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20">
+<h3 class="reveal font-display font-extrabold text-3xl md:text-5xl">What we stand for.</h3>
+<div class="grid md:grid-cols-3 gap-5 mt-8">
+<div class="reveal border border-line rounded-3xl p-7"><p class="font-display font-black text-4xl text-zinc-600">01</p><h4 class="font-display font-bold text-xl mt-4">Absolute Precision</h4><p class="text-zinc-400 mt-2 text-sm leading-relaxed">Every number reconciled. Every system tested. No approximations.</p></div>
+<div class="reveal border border-line rounded-3xl p-7"><p class="font-display font-black text-4xl text-zinc-600">02</p><h4 class="font-display font-bold text-xl mt-4">Unfiltered Honesty</h4><p class="text-zinc-400 mt-2 text-sm leading-relaxed">We tell you the real position, even when it is uncomfortable. Especially then.</p></div>
+<div class="reveal border border-line rounded-3xl p-7"><p class="font-display font-black text-4xl text-zinc-600">03</p><h4 class="font-display font-bold text-xl mt-4">Modern Infrastructure</h4><p class="text-zinc-400 mt-2 text-sm leading-relaxed">Legacy processes do not scale. We build systems designed for growth.</p></div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-24">
+<div class="reveal border border-line rounded-3xl p-8 md:p-12 text-center bg-[#0A0A0A]"><h3 class="font-display font-extrabold text-3xl md:text-4xl">See how the two divisions work together.</h3><div class="flex flex-wrap justify-center gap-3 mt-7"><a href="services.html" class="btn bg-accounting px-7 py-3.5 rounded-full font-semibold">Accounting</a><a href="technologies.html" class="btn bg-tech px-7 py-3.5 rounded-full font-semibold">Technologies</a></div></div>
+</section>
+</main>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
