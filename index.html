@@ -1,28 +1,196 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MountainView Group | Accounting & Business Support in South Africa</title>
-<link rel="stylesheet" href="style.css">
-</head><body>
-<header><div class="container nav">
-<a href="index.html"><img src="logo.jpg" alt="MountainView Group"></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-<nav id="menu"><a href="who-we-are.html">Who We Are</a><a href="services.html">Services</a><a href="smes-ngos.html">For SMEs & NGOs</a><a href="contact.html" class="btn">Contact Us</a></nav>
-</div></header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MountainView Group | Boutique Accounting & Digital</title>
+    <meta name="description" content="Clear. Compliant. In control. Premium boutique accounting and digital infrastructure for SMEs and NGOs in South Africa.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 
-<section class="hero"><div class="container hero-grid">
-<div><div class="eyebrow">MountainView Group • South Africa</div>
-<h1>Boutique accounting for SMEs & NGOs.<br><span>Clear. Compliant. In control.</span></h1>
-<p>A full-service accounting firm primarily serving small to medium enterprises and NGOs. We keep your books, tax and reporting in order — so you can focus on running your organisation.</p>
-<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a href="contact.html" class="btn">Enquire Now →</a><a href="services.html" class="btn btn-outline">Our Services</a></div></div>
-<div class="hero-card"><span class="tag">WHAT WE DO</span><h3>Accounting + Business Support</h3><p>One firm for your finance and your back-office.</p><ul><li><b>Core:</b> Bookkeeping, Financial Statements, SARS & Tax, Pre-Audit Checks</li><li><b>Support:</b> Budget Coaching, Admin, Inventory, Grant Reporting, Tender Budgets, Database Management</li></ul><a href="services.html" class="btn btn-black" style="width:100%;text-align:center">View All Services</a></div>
-</div></section>
+    <!-- CRISP CHAT BOT (Neo) -->
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</head>
+<body>
 
-<section><div class="container"><div class="eyebrow">WHY MOUNTAINVIEW</div><h2>A boutique firm that knows your name.</h2><div class="grid3"><div class="card"><h3>Personal, Not Corporate</h3><p>You don't get passed around. You get a team that understands small business and NGO realities.</p></div><div class="card"><h3>SMEs & NGOs First</h3><p>We primarily serve SMEs and NGOs across South Africa. Tight budgets, funder deadlines, SARS pressure — we get it.</p></div><div class="card"><h3>Clear Numbers</h3><p>Accurate books, clear reports, and practical support — so you can make decisions with confidence.</p></div></div></div></section>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YOUR_LOGO_URL.png" alt="MountainView Group Logo" class="logo-img">
+            <span class="logo-text">MOUNTAINVIEW<span class="text-purple">GROUP</span></span>
+        </div>
+        
+        <!-- Desktop Links -->
+        <div class="nav-links">
+            <a href="#the-firm" class="nav-link">The Firm</a>
+            <a href="#sme-advisory" class="nav-link">SME Advisory</a>
+            <a href="#ngo-compliance" class="nav-link">NGO Compliance</a>
+            <a href="#client-solutions" class="nav-link">Client Solutions</a>
+            <a href="#digital" class="nav-link">Digital & Web</a>
+            <a href="#contact" class="btn btn-primary nav-btn">Contact Us</a>
+        </div>
 
-<section class="dark"><div class="container split"><div><h2>For SMEs</h2><p>You run the business. We run the numbers.</p><a href="smes-ngos.html" class="btn" style="margin-top:16px">For SMEs →</a></div><div><h2>For NGOs</h2><p>You run the mission. We keep the compliance.</p><a href="smes-ngos.html" class="btn" style="margin-top:16px">For NGOs →</a></div></div></section>
+        <!-- Hamburger Icon (Mobile Only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
-<section><div class="container" style="text-align:center"><h2>Let's talk about your business or NGO.</h2><p class="sub" style="margin:auto">Send us a message and we'll get back to you.</p><a href="contact.html" class="btn" style="margin-top:18px">Contact Us</a></div></section>
+    <!-- FULL SCREEN MOBILE MENU OVERLAY -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="close-btn" aria-label="Close Menu">&times;</button>
+        <div class="mobile-menu-links">
+            <a href="#the-firm" class="mobile-link">The Firm</a>
+            <a href="#sme-advisory" class="mobile-link">SME Advisory</a>
+            <a href="#ngo-compliance" class="mobile-link">NGO Compliance</a>
+            <a href="#client-solutions" class="mobile-link">Client Solutions</a>
+            <a href="#digital" class="mobile-link">Digital & Web</a>
+            <a href="#contact" class="btn btn-primary mobile-contact-btn">Contact Us</a>
+        </div>
+    </div>
 
-<footer><div class="container foot-grid"><div><b>MOUNTAINVIEW GROUP</b><p>Boutique full-service accounting firm primarily serving SMEs and NGOs in South Africa.</p></div><div><b>Menu</b><p><a href="who-we-are.html">Who We Are</a><br><a href="services.html">Services</a><br><a href="smes-ngos.html">For SMEs & NGOs</a><br><a href="contact.html">Contact</a></p></div><div><b>Services</b><p>Bookkeeping<br>Financial Statements<br>SARS & Tax<br>Pre-Audit Checks</p></div></div><div class="container small">© 2026 MountainView Group • mountainviewsa.co.za • South Africa</div></footer>
-<script>document.addEventListener('click',e=>{if(!e.target.closest('header'))document.getElementById('menu').classList.remove('open')})</script>
-</body></html>
+    <!-- HERO SECTION -->
+    <section class="hero" id="the-firm">
+        <div class="hero-content">
+            <p class="pre-heading">MOUNTAINVIEW GROUP • SOUTH AFRICA</p>
+            <h1 class="main-heading">
+                Boutique Accounting.<br>
+                Absolute Clarity.
+            </h1>
+            <h2 class="sub-heading">Clear. Compliant. In control.</h2>
+            <p class="hero-text">
+                A premium accounting practice tailored for Small and Medium Enterprises (SMEs) and Non-Profit Organisations. We manage your financial reporting, tax obligations, and statutory compliance with precision so you can focus entirely on scaling your business or driving your mission.
+            </p>
+            
+            <div class="button-group">
+                <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+                <a href="#client-solutions" class="btn btn-outline">Explore Our Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SME SECTION -->
+    <section id="sme-advisory" class="split-section dark-bg">
+        <div class="split-content">
+            <h2>For Enterprises & SMEs</h2>
+            <h3 class="text-purple">Build your business on a solid financial foundation.</h3>
+            <p>From day-to-day bookkeeping to strategic tax planning and payroll, we provide the financial infrastructure your business needs to grow with confidence. No jargon. Just accurate, actionable financial data.</p>
+            <a href="#contact" class="btn btn-outline">SME Advisory Solutions &rarr;</a>
+        </div>
+    </section>
+
+    <!-- NGO SECTION -->
+    <section id="ngo-compliance" class="split-section watermark-section">
+        <div class="watermark-overlay"></div>
+        <div class="split-content relative-z">
+            <h2>For Non-Profit Organisations</h2>
+            <h3 class="text-purple">You run the mission. We protect the compliance.</h3>
+            <p>The non-profit sector demands absolute transparency. We handle your fund accounting, donor reporting, and NPO regulatory compliance so your board has complete peace of mind and your team can focus on impact.</p>
+            <a href="#contact" class="btn btn-primary">NGO Compliance Services &rarr;</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (Client Solutions) -->
+    <section id="client-solutions" class="services-section">
+        <div class="section-header">
+            <h2>Client Solutions</h2>
+        </div>
+        <div class="grid-container">
+            <div class="service-card">
+                <h3>Financial Reporting</h3>
+                <p>Accurate, real-time financial data. We maintain your ledgers so you always know exactly where you stand.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tax & Compliance</h3>
+                <p>Proactive tax planning and meticulous SARS submissions. We ensure you meet every deadline, avoiding penalties and stress.</p>
+            </div>
+            <div class="service-card">
+                <h3>Payroll Support</h3>
+                <p>Streamlined payroll processing and administrative support, ensuring your team is paid accurately and on time.</p>
+            </div>
+            
+            <!-- NEW DIGITAL SERVICE CARD -->
+            <div class="service-card" id="digital">
+                <h3>Digital Infrastructure & Web</h3>
+                <p>We design and build secure, scalable front-end and back-end web solutions. From corporate websites to custom web applications, we ensure your digital presence is as robust as your financial foundation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <h2>Let's discuss your requirements.</h2>
+            <p>Submit an enquiry and a member of our team will be in touch.</p>
+            
+            <!-- FORMSPREE FORM -->
+            <form action="https://formspree.io/f/mnpdworp" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width-btn">Submit Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="YOUR_LOGO_URL.png" alt="Logo" class="logo-img">
+                <span class="logo-text">MOUNTAINVIEW<span class="text-purple">GROUP</span></span>
+            </div>
+            <p>&copy; 2024 MountainView Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR MENU -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-contact-btn');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
