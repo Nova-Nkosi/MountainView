@@ -3,33 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technologies - MountainView Group</title>
+<title>MountainView Technologies — Corporate Web Architecture & Systems</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-body antialiased">
-<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-2"></div></div>
 <header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
 <a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
-<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-400"><a href="index.html">Home</a><a href="accounting.html">Accounting</a><a href="technologies.html" class="text-white">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-<a href="login.html" class="hidden md:inline-flex border border-line px-5 py-2.5 rounded-full text-sm">Client Login</a>
-<button id="menuBtn" class="md:hidden text-2xl px-2">Menu</button>
+<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+<a href="who-we-are.html" class="hover:text-white">Who We Are</a>
+<a href="services.html" class="hover:text-white">Accounting</a>
+<a href="technologies.html" class="text-white">Technologies</a>
+<a href="smes-ngos.html" class="hover:text-white">SMEs & NGOs</a>
+<a href="contact.html" class="bg-white text-black px-5 py-2.5 rounded-full font-semibold btn">Start a Project</a>
+</nav>
+<button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center border border-line rounded-full" aria-label="Open menu"><div class="space-y-1.5"><div class="w-5 h-[2px] bg-white"></div><div class="w-5 h-[2px] bg-white"></div></div></button>
 </header>
-<div id="overlay" class="fixed inset-0 z-50 bg-black/95 p-6 flex-col"><div class="flex justify-between items-center"><span class="font-display font-black text-xl">MOUNTAINVIEW GROUP</span><button id="closeBtn" class="text-3xl">X</button></div><nav class="flex flex-col gap-5 mt-10 text-2xl font-display font-bold"><a href="index.html">Home</a><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div>
-<main class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-24">
-<p class="text-xs tracking-[0.3em] text-blue-300 uppercase reveal">02 - Technologies</p>
-<h1 class="font-display font-black text-4xl md:text-6xl mt-3 reveal">Systems that<br>work for you.</h1>
-<p class="text-zinc-400 mt-4 max-w-xl reveal">Corporate websites, client portals, and simple systems that save time and make your business look serious.</p>
-<div class="grid md:grid-cols-3 gap-5 mt-10">
-<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A] reveal"><h3 class="font-display font-bold text-xl">Corporate Websites</h3><p class="text-zinc-400 text-sm mt-2">Fast, mobile friendly websites that build trust and win clients.</p></div>
-<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A] reveal"><h3 class="font-display font-bold text-xl">Client Portals</h3><p class="text-zinc-400 text-sm mt-2">Share documents, reports, and updates in one secure place.</p></div>
-<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A] reveal"><h3 class="font-display font-bold text-xl">Systems Integration</h3><p class="text-zinc-400 text-sm mt-2">Connect your tools so you stop doing the same work twice.</p></div>
+<div id="overlay" class="fixed inset-0 z-30 bg-white text-black flex flex-col justify-center px-8">
+<button id="closeBtn" class="absolute top-5 right-5 w-11 h-11 border border-black/20 rounded-full text-2xl leading-none">&times;</button>
+<a href="index.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Home</a>
+<a href="who-we-are.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Who We Are</a>
+<a href="services.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-accounting">Accounting</a>
+<a href="technologies.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-tech">Technologies</a>
+<a href="smes-ngos.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">SMEs & NGOs</a>
+<a href="contact.html" class="font-display font-extrabold text-4xl py-3">Contact</a>
 </div>
-<div class="mt-10 border border-line rounded-3xl p-8 bg-white text-black flex flex-col md:flex-row justify-between gap-6 items-start md:items-center reveal"><div><h2 class="font-display font-black text-3xl">Need a website or portal?</h2><p class="text-zinc-600 mt-2">Tell us what you need and we will quote within 1 business day.</p></div><a href="contact.html" class="bg-black text-white px-8 py-4 rounded-full font-semibold">Get a Quote</a></div>
+<main class="relative z-10">
+<section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-12 relative">
+<div class="node w-12 h-12 top-10 right-10 hidden md:block"></div><div class="node w-6 h-6 top-32 right-32 hidden md:block" style="animation-delay:1.2s"></div><div class="node w-8 h-8 top-48 right-16 hidden md:block" style="animation-delay:2s"></div>
+<p class="reveal text-xs tracking-[0.3em] text-blue-300 uppercase">MountainView Technologies • Division 02</p>
+<h1 class="reveal font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[5.5rem] mt-5">MODERN<br>INFRASTRUCTURE.<br><span class="text-zinc-500">BUILT TO SCALE.</span></h1>
+<p class="reveal max-w-xl text-zinc-400 mt-6 leading-relaxed">Corporate web architecture, full-stack engineering, and systems integration. So your finance and your tech finally speak the same language.</p>
+<div class="reveal flex flex-wrap gap-3 mt-8"><a href="contact.html" class="btn bg-tech px-7 py-3.5 rounded-full font-semibold">Start a Build →</a><a href="services.html" class="btn border border-line px-7 py-3.5 rounded-full">Pair With Accounting</a></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20 grid md:grid-cols-2 gap-5">
+<div class="reveal card card-tech border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-blue-300 uppercase">01</span><h2 class="font-display font-extrabold text-2xl mt-3">Corporate Web Architecture</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Fast, secure, high-performance websites that position your organisation as institutional — not amateur. No-build, lightweight, deployable in days.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Multi-Page Corporate Sites</li><li>— Holding & Division Structures</li><li>— Performance Optimisation</li><li>— SEO & Analytics Setup</li></ul></div>
+<div class="reveal card card-tech border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-blue-300 uppercase">02</span><h2 class="font-display font-extrabold text-2xl mt-3">Full-Stack Engineering</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">From landing page to client portal — front-end, back-end, and database, built to scale with your operations.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Front-End (HTML / Tailwind / JS)</li><li>— Back-End & APIs</li><li>— Databases & Auth</li><li>— Client Portals & Dashboards</li></ul></div>
+<div class="reveal card card-tech border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-blue-300 uppercase">03</span><h2 class="font-display font-extrabold text-2xl mt-3">Systems Integration</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Connect your accounting, CRM, forms, and chat — so data flows once, correctly, everywhere.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Form & Lead Routing</li><li>— Chatbot / Client Triage</li><li>— Accounting System Setup</li><li>— Automation & Workflows</li></ul></div>
+<div class="reveal card card-tech border border-line rounded-3xl p-7 bg-[#0A0A0A]"><span class="text-xs tracking-[0.25em] text-blue-300 uppercase">04</span><h2 class="font-display font-extrabold text-2xl mt-3">Digital Infrastructure</h2><p class="text-zinc-400 mt-3 text-sm leading-relaxed">Domains, hosting, security, and maintenance — the boring infrastructure that keeps you online and credible.</p><ul class="mt-5 space-y-2 text-sm text-zinc-300"><li>— Domain & Hosting Setup</li><li>— Security & Backups</li><li>— Email & Workspace</li><li>— Ongoing Maintenance</li></ul></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-20">
+<div class="reveal bg-tech rounded-3xl p-7 md:p-10 md:flex md:items-center justify-between gap-8"><div><h3 class="font-display font-extrabold text-2xl md:text-3xl">Logic. Data. Precision.</h3><p class="text-blue-200 mt-2 text-sm">We build systems your accountants will love — because we are accountants too.</p></div><a href="contact.html" class="btn bg-white text-black px-7 py-3.5 rounded-full font-semibold whitespace-nowrap mt-5 md:mt-0 inline-block">Get a Build Quote →</a></div>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-24">
+<div class="reveal border border-line rounded-3xl p-8 text-center bg-[#0A0A0A]"><h3 class="font-display font-extrabold text-2xl md:text-3xl">Need finance with your tech?</h3><p class="text-zinc-400 mt-2">The system is only half the story. The numbers are the other half.</p><a href="services.html" class="btn bg-accounting px-7 py-3.5 rounded-full font-semibold inline-block mt-5">See Accounting →</a></div>
+</section>
 </main>
-<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
