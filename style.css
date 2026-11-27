@@ -1,152 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&display=swap');
-
-:root {
-    --bg-color: #050505;
-    --text-main: #ffffff;
-    --text-muted: #888888;
-    --border-color: #222222;
-    
-    --accent-accounting: #4C1D95; 
-    --accent-tech: #1E3A8A; 
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-}
-
-/* Ambient Lighting Orbs */
-.ambient-light {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: -1;
-    opacity: 0.15;
-    animation: pulse-glow 10s infinite alternate;
-}
-.light-white {
-    width: 600px; height: 600px;
-    background: #ffffff;
-    top: -10%; left: -10%;
-}
-.light-purple {
-    width: 500px; height: 500px;
-    background: var(--accent-accounting);
-    bottom: 10%; right: -10%;
-}
-.light-blue {
-    width: 600px; height: 600px;
-    background: var(--accent-tech);
-    top: 20%; right: -5%;
-}
-
-@keyframes pulse-glow {
-    0% { transform: scale(1) translate(0, 0); opacity: 0.1; }
-    100% { transform: scale(1.1) translate(20px, -20px); opacity: 0.2; }
-}
-
-/* Background Grid Pattern */
-.bg-grid {
-    background-size: 50px 50px;
-    background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    mask-image: radial-gradient(circle at center, black, transparent 80%);
-}
-
-/* Scroll Reveal Animations */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Button Hover Glow */
-.btn-glow {
-    position: relative;
-    transition: all 0.3s ease;
-}
-.btn-glow::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: white;
-    z-index: -1;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    filter: blur(10px);
-}
-.btn-glow:hover::before {
-    opacity: 0.2;
-}
-.btn-glow:hover {
-    transform: translateY(-2px);
-}
-
-/* Custom Input Styling */
-.input-minimal {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
-    color: white;
-    width: 100%;
-    transition: border-color 0.3s ease;
-}
-.input-minimal:focus {
-    outline: none;
-    border-bottom-color: #ffffff;
-}
-
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-    clip-path: circle(0% at 100% 0%);
-    transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.mobile-menu-overlay.active {
-    clip-path: circle(150% at 100% 0%);
-}
-
-/* FLOATING TECH ART */
-.tech-node {
-    position: absolute;
-    border: 1px solid rgba(30, 58, 138, 0.3);
-    background: rgba(30, 58, 138, 0.05);
-    border-radius: 50%;
-    backdrop-filter: blur(4px);
-    z-index: -1;
-}
-.node-1 { width: 300px; height: 300px; top: 15%; right: -5%; animation: float 8s ease-in-out infinite; }
-.node-2 { width: 150px; height: 150px; bottom: 25%; right: 15%; animation: float 12s ease-in-out infinite reverse; border: 1px solid rgba(255, 255, 255, 0.1); }
-.node-3 { width: 50px; height: 50px; top: 45%; right: 30%; animation: float 6s ease-in-out infinite; background: rgba(30, 58, 138, 0.2); }
-.node-line { position: absolute; background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.4), transparent); height: 1px; z-index: -1; }
-.line-1 { width: 400px; top: 30%; right: -10%; transform: rotate(-45deg); }
-
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-}
+/* style.css */
+:root{--ink:#050505;--paper:#FFFFFF;--muted:#A1A1AA;--accounting:#4C1D95;--tech:#1E3A8A;--line:rgba(255,255,255,.12);--surface:#0A0A0A}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Inter',sans-serif;overflow-x:hidden;margin:0}
+h1,h2,h3,.font-display{font-family:'Outfit',sans-serif}
+.font-editorial{font-family:Georgia,serif}
+.orb{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.35;pointer-events:none}
+.orb-1{width:480px;height:480px;background:var(--accounting);top:-120px;left:-120px;animation:drift1 18s ease-in-out infinite alternate}
+.orb-2{width:420px;height:420px;background:var(--tech);bottom:-100px;right:-80px;animation:drift2 20s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(60px,80px) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-60px,-60px) scale(1.1)}}
+.reveal{opacity:0;transform:translateY(28px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+#overlay{clip-path:circle(0% at calc(100% - 44px) 40px);transition:clip-path .65s cubic-bezier(.76,0,.24,1);pointer-events:none}
+#overlay.open{clip-path:circle(150% at calc(100% - 44px) 40px);pointer-events:auto}
+.card{transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px)}
+.card-acct:hover{box-shadow:0 20px 60px rgba(76,29,149,.45)}
+.card-tech:hover{box-shadow:0 20px 60px rgba(30,58,138,.5)}
+.btn{transition:all .3s}
+.btn:hover{transform:translateY(-2px)}
+.node{position:absolute;border:1px solid rgba(255,255,255,.25);animation:float 7s ease-in-out infinite alternate}
+@keyframes float{to{transform:translateY(-18px) rotate(8deg)}}
+.wrap{max-width:80rem;margin:0 auto;padding-left:1.25rem;padding-right:1.25rem}
+input,textarea,select{width:100%;background:#111;border:1px solid var(--line);color:#fff;padding:14px;border-radius:12px;font-family:inherit;font-size:1rem}
+input:focus,textarea:focus,select:focus{outline:2px solid #fff;outline-offset:1px}
+label{display:block;font-size:.875rem;font-weight:600;margin-bottom:8px}
