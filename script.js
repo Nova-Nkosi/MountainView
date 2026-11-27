@@ -1,6 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-
   /* ========== 1. MOBILE MENU ========== */
   const menuBtn = document.getElementById('menuBtn');
   const closeBtn = document.getElementById('closeBtn');
