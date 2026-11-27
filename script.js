@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ========== 4. LOGIN (login.html) ========== */
+  /* ========== 4. LOGIN (login.html) — NO DASHBOARD REDIRECT ========== */
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
     loginForm.addEventListener('submit', e => {
@@ -56,25 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('login-email')?.value.trim();
       const pass = document.getElementById('login-password')?.value.trim();
       const err = document.getElementById('loginError');
-      if (!email || !pass) { if (err) err.classList.remove('hidden'); return; }
-      localStorage.setItem('mv_user', email);
-      window.location.href = 'dashboard.html';
+      const success = document.getElementById('loginSuccess');
+      if (!email || !pass) {
+        if (err) err.classList.remove('hidden');
+        if (success) success.classList.add('hidden');
+        return;
+      }
+      if (err) err.classList.add('hidden');
+      if (success) success.classList.remove('hidden');
+      const btn = loginForm.querySelector('button[type="submit"]');
+      if (btn) { btn.textContent = 'Request Received ✓'; btn.disabled = true; }
     });
   }
 
-  /* ========== 5. DASHBOARD (dashboard.html) ========== */
-  const userEmailEl = document.getElementById('userEmail');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const savedUser = localStorage.getItem('mv_user');
-  if (userEmailEl && savedUser) userEmailEl.textContent = savedUser;
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-      localStorage.removeItem('mv_user');
-      window.location.href = 'login.html';
-    });
-  }
-
-  /* ========== 6. CONTACT FORM SUCCESS MESSAGE ========== */
+  /* ========== 5. CONTACT FORM ========== */
   const contactForm = document.querySelector('form[action*="formspree"]');
   if (contactForm) {
     contactForm.addEventListener('submit', () => {
@@ -83,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 7. CHATBOT (if you add chatbot.html elements) ========== */
+  /* ========== 6. CHATBOT ========== */
   const chatToggle = document.getElementById('chatToggle');
   const chatWindow = document.getElementById('chatWindow');
   const chatForm = document.getElementById('chatForm');
@@ -125,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 8. ACTIVE NAV HIGHLIGHT ========== */
+  /* ========== 7. ACTIVE NAV HIGHLIGHT ========== */
   const current = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a, #overlay a').forEach(a => {
     if (a.getAttribute('href') === current) a.classList.add('text-white');
