@@ -4,35 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Portal Login | MountainView Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
-        tailwind.config = { theme: { extend: { colors: { brand: { black: '#121212', offblack: '#1a1a1a', purple: '#4C1D95', purplehover: '#6D28D9', gray: '#a3a3a3' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#050505', muted: '#888888', border: '#222222' }
+                    }
+                }
+            }
+        }
     </script>
 </head>
-<body class="bg-brand-black text-white font-sans antialiased flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-md p-8 bg-brand-offblack rounded-2xl border border-white/10 shadow-2xl">
+<body class="bg-brand-bg text-white font-sans antialiased flex items-center justify-center min-h-screen relative overflow-hidden">
+    
+    <div class="bg-grid"></div>
+
+    <div class="w-full max-w-md p-8 md:p-12 bg-[#0a0a0a] rounded-2xl border border-brand-border shadow-2xl relative z-10">
         <div class="text-center mb-10">
-            <a href="index.html" class="inline-flex items-center gap-3 mb-6">
-                <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
-                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+            <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-500 group-hover:scale-110">
+                    <path d="M50 10L90 90H10L50 10Z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+                    <path d="M50 40L70 80H30L50 40Z" fill="white"/>
+                </svg>
+                <span class="font-bold text-xl tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView</span>
             </a>
-            <h2 class="text-2xl font-bold">Client Portal</h2>
-            <p class="text-brand-gray text-sm mt-2">Secure access for MountainView clients.</p>
+            <h2 class="text-2xl font-bold text-white">Client Portal</h2>
+            <p class="text-brand-muted text-sm mt-2">Secure access for MountainView clients.</p>
         </div>
-        <form class="space-y-5">
+        <form class="space-y-6">
             <div>
-                <label for="email" class="block text-sm font-semibold mb-2">Email Address</label>
-                <input type="email" id="email" class="w-full px-4 py-3 bg-brand-black border border-white/10 rounded-lg focus:outline-none focus:border-brand-purple text-white">
+                <label for="email" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">Email Address</label>
+                <input type="email" id="email" class="input-minimal" placeholder="client@company.com">
             </div>
             <div>
-                <label for="password" class="block text-sm font-semibold mb-2">Password</label>
-                <input type="password" id="password" class="w-full px-4 py-3 bg-brand-black border border-white/10 rounded-lg focus:outline-none focus:border-brand-purple text-white">
+                <label for="password" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">Password</label>
+                <input type="password" id="password" class="input-minimal" placeholder="••••••••">
             </div>
-            <button type="button" class="w-full bg-brand-purple hover:bg-brand-purplehover text-white font-bold py-3 rounded-lg transition-all duration-300">Sign In</button>
+            <button type="button" class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition-all duration-300 mt-4">Sign In</button>
         </form>
-        <div class="mt-6 text-center">
-            <a href="index.html" class="text-sm text-brand-gray hover:text-white transition-colors">&larr; Return to main site</a>
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-sm text-brand-muted hover:text-white transition-colors">&larr; Return to main site</a>
         </div>
     </div>
 </body>
