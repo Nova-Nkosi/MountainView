@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MountainView Group | Boutique Accounting & Digital</title>
-    <meta name="description" content="Clear. Compliant. In control. Premium boutique accounting and digital infrastructure for SMEs and NGOs in South Africa.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>MountainView Group | Financial & Technological Infrastructure</title>
+    <meta name="description" content="MountainView Group is a holding entity comprising Mountainview Accounting and Mountainview Technologies.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            black: '#121212',
-                            offblack: '#1a1a1a',
-                            purple: '#4C1D95',
-                            purplehover: '#6D28D9',
-                            gray: '#a3a3a3'
-                        }
-                    },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                        brand: { bg: '#050505', accentAcc: '#4C1D95', accentTech: '#1E3A8A', muted: '#888888', border: '#222222' }
+                    }
                 }
             }
         }
@@ -30,115 +22,126 @@
     <script type="text/javascript">
         window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
     </script>
-    <style>
-        .watermark-bg {
-            background-image: url('logo.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: right center;
-            opacity: 0.03;
-        }
-    </style>
 </head>
-<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
+<body class="relative min-h-screen selection:bg-white selection:text-black">
 
-    <nav class="fixed w-full top-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 px-[5%] py-5 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 z-50">
-            <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
-            <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+    <div class="bg-grid"></div>
+
+    <nav class="fixed w-full top-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-brand-border px-6 py-5 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 group z-50">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-500 group-hover:scale-110">
+                <path d="M50 10L90 90H10L50 10Z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M50 40L70 80H30L50 40Z" fill="white"/>
+            </svg>
+            <span class="font-bold text-lg tracking-widest uppercase" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
         </a>
-        <div class="hidden md:flex items-center gap-8 text-sm">
-            <a href="who-we-are.html" class="hover:text-brand-purple transition-colors duration-300">The Firm</a>
-            <a href="smes-ngos.html" class="hover:text-brand-purple transition-colors duration-300">SME Advisory</a>
-            <a href="smes-ngos.html#ngo-section" class="hover:text-brand-purple transition-colors duration-300">NGO Compliance</a>
-            <a href="services.html" class="hover:text-brand-purple transition-colors duration-300">Client Solutions</a>
-            <a href="services.html#digital" class="hover:text-brand-purple transition-colors duration-300">Digital & Web</a>
-            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+            <a href="who-we-are.html" class="text-brand-muted hover:text-white transition-colors duration-300">The Group</a>
+            <a href="services.html" class="text-brand-muted hover:text-white transition-colors duration-300">Accounting</a>
+            <a href="technologies.html" class="text-brand-muted hover:text-white transition-colors duration-300">Technologies</a>
+            <a href="contact.html" class="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300">Contact Us</a>
         </div>
-        <button id="hamburger-btn" class="md:hidden z-50 flex flex-col gap-1.5 w-8" aria-label="Open Menu">
-            <span class="block h-0.5 w-full bg-white rounded-full"></span>
-            <span class="block h-0.5 w-full bg-white rounded-full"></span>
-            <span class="block h-0.5 w-full bg-white rounded-full"></span>
+        <button id="hamburger" class="md:hidden z-50 flex flex-col gap-1.5 w-8">
+            <span class="block h-[2px] w-full bg-white rounded-full"></span>
+            <span class="block h-[2px] w-3/4 bg-white rounded-full ml-auto"></span>
+            <span class="block h-[2px] w-full bg-white rounded-full"></span>
         </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-400 ease-in-out">
-        <button id="close-btn" class="absolute top-6 right-[5%] text-5xl text-white hover:text-brand-purple transition-colors">&times;</button>
-        <div class="flex flex-col items-center gap-6">
-            <a href="who-we-are.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">The Firm</a>
-            <a href="smes-ngos.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">SME Advisory</a>
-            <a href="smes-ngos.html#ngo-section" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">NGO Compliance</a>
-            <a href="services.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">Client Solutions</a>
-            <a href="services.html#digital" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">Digital & Web</a>
-            <a href="contact.html" class="mobile-link mt-4 bg-brand-purple hover:bg-brand-purplehover text-white px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
+    <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-[#050505] z-40 flex flex-col justify-center items-center">
+        <button id="close-menu" class="absolute top-6 right-6 text-5xl text-brand-muted hover:text-white">&times;</button>
+        <div class="flex flex-col items-center gap-8">
+            <a href="who-we-are.html" class="mobile-link text-4xl font-medium text-white">The Group</a>
+            <a href="services.html" class="mobile-link text-4xl font-medium hover:text-white text-brand-muted">Accounting</a>
+            <a href="technologies.html" class="mobile-link text-4xl font-medium hover:text-white text-brand-muted">Technologies</a>
+            <a href="contact.html" class="mobile-link mt-8 bg-white text-black px-12 py-4 rounded-full font-bold text-xl">Contact Us</a>
         </div>
     </div>
 
-    <section class="pt-40 pb-20 px-[5%] max-w-5xl mx-auto relative">
-        <p class="text-brand-purple font-semibold tracking-[2px] text-sm mb-6 uppercase">MOUNTAINVIEW GROUP • SOUTH AFRICA</p>
-        <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-4">Boutique Accounting.<br>Absolute Clarity.</h1>
-        <h2 class="text-2xl md:text-4xl font-medium text-brand-purple mb-8">Clear. Compliant. In control.</h2>
-        <p class="text-lg md:text-xl text-brand-gray max-w-2xl mb-12 leading-relaxed">
-            A premium accounting practice tailored for Small and Medium Enterprises (SMEs) and Non-Profit Organisations. We manage your financial reporting, tax obligations, and statutory compliance with precision so you can focus entirely on scaling your business or driving your mission.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-8 py-4 rounded-full font-bold text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-purple/40">Request a Consultation</a>
-            <a href="services.html" class="border-2 border-white hover:border-brand-purple hover:text-brand-purple text-white px-8 py-4 rounded-full font-bold text-center transition-all duration-300 transform hover:-translate-y-1">Explore Our Solutions</a>
+    <main class="pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-[85vh]">
+        <div class="reveal">
+            <p class="text-brand-muted font-mono text-sm tracking-widest mb-6 border border-brand-border inline-block px-3 py-1 rounded-full bg-[#111]">HOLDING ENTITY</p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.95] mb-8 tracking-tighter text-white">
+                Dual Forces.<br>
+                <span class="text-brand-muted">Singular Vision.</span>
+            </h1>
         </div>
-    </section>
-
-    <section class="py-24 px-[5%] bg-brand-black">
-        <div class="max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Enterprises & SMEs</h2>
-            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">Build your business on a solid financial foundation.</h3>
-            <p class="text-lg text-brand-gray mb-8 max-w-3xl">From day-to-day bookkeeping to strategic tax planning and payroll, we provide the financial infrastructure your business needs to grow with confidence. No jargon. Just accurate, actionable financial data.</p>
-            <a href="smes-ngos.html" class="inline-block border-2 border-white hover:border-brand-purple hover:text-brand-purple px-8 py-3 rounded-full font-bold transition-all duration-300">SME Advisory Solutions &rarr;</a>
-        </div>
-    </section>
-
-    <section id="ngo-section" class="py-24 px-[5%] bg-brand-offblack relative overflow-hidden">
-        <div class="absolute inset-0 watermark-bg z-0"></div>
-        <div class="relative z-10 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Non-Profit Organisations</h2>
-            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">You run the mission. We protect the compliance.</h3>
-            <p class="text-lg text-brand-gray mb-8 max-w-3xl">The non-profit sector demands absolute transparency. We handle your fund accounting, donor reporting, and NPO regulatory compliance so your board has complete peace of mind and your team can focus on impact.</p>
-            <a href="smes-ngos.html#ngo-section" class="inline-block bg-brand-purple hover:bg-brand-purplehover text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-brand-purple/30">NGO Compliance Services &rarr;</a>
-        </div>
-    </section>
-
-    <section class="py-24 px-[5%] bg-brand-offblack">
-        <h2 class="text-4xl font-bold mb-12">Client Solutions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
-                <h3 class="text-2xl font-semibold mb-4">Financial Reporting</h3>
-                <p class="text-brand-gray">Accurate, real-time financial data. We maintain your ledgers so you always know exactly where you stand.</p>
-            </div>
-            <div class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
-                <h3 class="text-2xl font-semibold mb-4">Tax & Compliance</h3>
-                <p class="text-brand-gray">Proactive tax planning and meticulous SARS submissions. We ensure you meet every deadline, avoiding penalties and stress.</p>
+        
+        <div class="reveal flex flex-col md:flex-row gap-12 mt-8 items-start justify-between">
+            <p class="text-brand-muted text-lg md:text-xl max-w-xl leading-relaxed font-light">
+                MountainView Group is the holding entity for two distinct powerhouses. We provide high-level financial strategy through <strong class="text-white">Mountainview Accounting</strong>, and elite digital infrastructure through <strong class="text-white">Mountainview Technologies</strong>.
+            </p>
+            
+            <div class="flex flex-col gap-4 w-full md:w-auto mt-4 md:mt-0">
+                <a href="contact.html" class="bg-white text-black text-center px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-all duration-300">Request a Consultation</a>
             </div>
         </div>
+    </main>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-border">
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <a href="services.html" class="reveal group bg-[#0a0a0a] border border-brand-border p-10 md:p-16 rounded-3xl relative overflow-hidden hover:border-white/30 transition-all duration-500 block">
+                <div class="relative z-10">
+                    <p class="text-brand-muted font-mono text-xs tracking-widest mb-4">DIVISION 01</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Mountainview<br>Accounting</h2>
+                    <p class="text-brand-muted text-lg mb-8">Institutional-grade financial rigor, technical accounting, and strategic board advisory for SMEs and NGOs.</p>
+                    <span class="inline-flex items-center text-white transition-colors font-medium">
+                        Explore Accounting <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="technologies.html" class="reveal group bg-[#0a0a0a] border border-brand-border p-10 md:p-16 rounded-3xl relative overflow-hidden hover:border-white/30 transition-all duration-500 block">
+                <div class="relative z-10">
+                    <p class="text-brand-muted font-mono text-xs tracking-widest mb-4">DIVISION 02</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Mountainview<br>Technologies</h2>
+                    <p class="text-brand-muted text-lg mb-8">Full-stack web development, custom software architecture, and digital infrastructure that scales.</p>
+                    <span class="inline-flex items-center text-white transition-colors font-medium">
+                        Explore Technologies <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </span>
+                </div>
+            </a>
+
+        </div>
     </section>
 
-    <footer class="bg-brand-black py-16 px-[5%] text-center border-t border-white/10 relative overflow-hidden">
-        <div class="relative z-10 flex flex-col items-center">
-            <div class="flex items-center gap-3 mb-6">
-                <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
-                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+    <footer class="border-t border-brand-border bg-[#020202] pt-20 pb-10 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 10L90 90H10L50 10Z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+                            <path d="M50 40L70 80H30L50 40Z" fill="white"/>
+                        </svg>
+                        <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
+                    </a>
+                    <p class="text-brand-muted text-sm max-w-sm">The holding entity for Mountainview Accounting and Mountainview Technologies. Precision for SMEs and NGOs in South Africa.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Divisions</h4>
+                    <ul class="space-y-3 text-sm text-brand-muted">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Mountainview Accounting</a></li>
+                        <li><a href="technologies.html" class="hover:text-white transition-colors">Mountainview Technologies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-brand-muted">
+                        <li><a href="who-we-are.html" class="hover:text-white transition-colors">The Group</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="login.html" class="hover:text-white transition-colors">Client Portal</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-brand-gray text-sm">&copy; 2024 MountainView Group. All rights reserved.</p>
+            <div class="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-brand-muted text-xs">Copyright Mountainview Group 2026</p>
+                <p class="text-brand-muted text-xs">Designed for precision.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.remove('opacity-0', 'invisible'); mobileMenu.classList.add('opacity-100', 'visible'); });
-        const closeMenu = () => { mobileMenu.classList.remove('opacity-100', 'visible'); mobileMenu.classList.add('opacity-0', 'invisible'); };
-        closeBtn.addEventListener('click', closeMenu);
-        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
