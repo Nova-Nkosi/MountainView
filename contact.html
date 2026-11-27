@@ -1,127 +1,61 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | MountainView Group</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { bg: '#050505', muted: '#888888', border: '#222222' }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="text/javascript">
-        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MountainView Group</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="relative min-h-screen selection:bg-white selection:text-black flex flex-col overflow-hidden">
-
-    <div class="bg-grid"></div>
-    <div class="ambient-light light-white" style="top: 10%; right: 10%; width: 400px; height: 400px; opacity: 0.05;"></div>
-
-    <nav class="fixed w-full top-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-brand-border px-6 py-5 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 group z-50">
-            <img src="logo.jpg" alt="MountainView Group Logo" class="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
-            <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-        </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-            <a href="who-we-are.html" class="text-brand-muted hover:text-white transition-colors">The Firm</a>
-            <a href="services.html" class="text-brand-muted hover:text-white transition-colors">Our Services</a>
-            <a href="technologies.html" class="text-brand-muted hover:text-white transition-colors">Technologies</a>
-            <a href="contact.html" class="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300">Contact Us</a>
-        </div>
-        <button id="hamburger" class="md:hidden z-50 flex flex-col gap-1.5 w-8">
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-            <span class="block h-[2px] w-3/4 bg-white rounded-full ml-auto"></span>
-            <span class="block h-[2px] w-full bg-white rounded-full"></span>
-        </button>
-    </nav>
-
-    <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-[#050505] z-40 flex flex-col justify-center items-center">
-        <button id="close-menu" class="absolute top-6 right-6 text-5xl text-brand-muted hover:text-white">&times;</button>
-        <div class="flex flex-col items-center gap-6 text-center">
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-white hover:text-gray-300 transition-colors">The Firm</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">Our Services</a>
-            <a href="services.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">MountainView Accounting</a>
-            <a href="technologies.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">MountainView Technologies</a>
-            <a href="who-we-are.html" class="mobile-link text-3xl font-medium text-brand-muted hover:text-white transition-colors">A message from the Group Chief Executive</a>
-            <a href="contact.html" class="mobile-link mt-6 bg-white text-black px-12 py-4 rounded-full font-bold text-xl">Contact us</a>
-        </div>
-    </div>
-
-    <main class="flex-grow pt-40 pb-24 px-6 max-w-4xl mx-auto w-full relative z-10">
-        
-        <div class="reveal mb-16 text-center md:text-left">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-white">Let's talk.</h1>
-            <p class="text-brand-muted text-xl max-w-xl font-light">Submit an enquiry and a member of our team will review your requirements.</p>
-        </div>
-
-        <div class="reveal bg-[#0a0a0a]/80 backdrop-blur-sm border border-brand-border p-8 md:p-12 rounded-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full filter blur-[120px] opacity-5 pointer-events-none"></div>
-            
-            <form action="https://formspree.io/f/mnpdworp" method="POST" class="space-y-10 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div>
-                        <label for="name" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">01. Your Name</label>
-                        <input type="text" id="name" name="name" required class="input-minimal" placeholder="John Doe">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">02. Email Address</label>
-                        <input type="email" id="email" name="_replyto" required class="input-minimal" placeholder="john@company.com">
-                    </div>
-                </div>
-                <div>
-                    <label for="message" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">03. How can we help?</label>
-                    <textarea id="message" name="message" rows="4" required class="input-minimal" placeholder="Tell us about your requirements..."></textarea>
-                </div>
-                <button type="submit" class="w-full bg-white text-black font-bold py-4 rounded-full hover:bg-gray-200 transition-all duration-300 mt-4 text-lg">
-                    Submit Enquiry
-                </button>
-            </form>
-        </div>
-    </main>
-
-    <footer class="border-t border-brand-border bg-[#020202] pt-20 pb-10 px-6 mt-auto relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="index.html" class="flex items-center gap-3 mb-6">
-                        <img src="logo.jpg" alt="MountainView Group Logo" class="h-8 w-auto object-contain">
-                        <span class="font-bold text-lg tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-                    </a>
-                    <p class="text-brand-muted text-sm max-w-sm">The holding entity for Mountainview Accounting and Mountainview Technologies. Precision for SMEs and NGOs in South Africa.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Divisions</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Mountainview Accounting</a></li>
-                        <li><a href="technologies.html" class="hover:text-white transition-colors">Mountainview Technologies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-3 text-sm text-brand-muted">
-                        <li><a href="who-we-are.html" class="hover:text-white transition-colors">The Firm</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="login.html" class="hover:text-white transition-colors">Client Portal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-brand-muted text-xs">Copyright Mountainview Group 2026</p>
-                <p class="text-brand-muted text-xs">Designed for precision.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<body class="font-body antialiased">
+<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+<a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+<a href="who-we-are.html" class="hover:text-white">Who We Are</a>
+<a href="services.html" class="hover:text-white">Accounting</a>
+<a href="technologies.html" class="hover:text-white">Technologies</a>
+<a href="smes-ngos.html" class="hover:text-white">SMEs & NGOs</a>
+<a href="contact.html" class="bg-white text-black px-5 py-2.5 rounded-full font-semibold btn">Start a Project</a>
+</nav>
+<button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center border border-line rounded-full" aria-label="Open menu"><div class="space-y-1.5"><div class="w-5 h-[2px] bg-white"></div><div class="w-5 h-[2px] bg-white"></div></div></button>
+</header>
+<div id="overlay" class="fixed inset-0 z-30 bg-white text-black flex flex-col justify-center px-8">
+<button id="closeBtn" class="absolute top-5 right-5 w-11 h-11 border border-black/20 rounded-full text-2xl leading-none">&times;</button>
+<a href="index.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Home</a>
+<a href="who-we-are.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">Who We Are</a>
+<a href="services.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-accounting">Accounting</a>
+<a href="technologies.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10 text-tech">Technologies</a>
+<a href="smes-ngos.html" class="font-display font-extrabold text-4xl py-3 border-b border-black/10">SMEs & NGOs</a>
+<a href="contact.html" class="font-display font-extrabold text-4xl py-3">Contact</a>
+</div>
+<main class="relative z-10">
+<section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-12">
+<p class="reveal text-xs tracking-[0.3em] text-zinc-400 uppercase">Lead Generation • Response Within 1 Business Day</p>
+<h1 class="reveal font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[5.5rem] mt-5">LET'S BUILD<br>YOUR<br><span class="text-zinc-500">INFRASTRUCTURE.</span></h1>
+<p class="reveal max-w-xl text-zinc-400 mt-6 leading-relaxed">One conversation. Finance + Tech, aligned. Tell us what you need and we will map the next step.</p>
+</section>
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-24 grid md:grid-cols-[1fr_1.2fr] gap-6 items-start">
+<div class="reveal space-y-5">
+<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h2 class="font-display font-bold text-xl">What happens next?</h2><ol class="mt-4 space-y-3 text-sm text-zinc-300"><li><strong class="text-white">1. You send the form.</strong> 2 minutes.</li><li><strong class="text-white">2. We review.</strong> Your numbers + your systems.</li><li><strong class="text-white">3. We reply.</strong> Within 1 business day with a clear next step.</li></ol></div>
+<div class="border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h2 class="font-display font-bold text-xl">Prefer direct?</h2><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Johannesburg, South Africa<br>Serving SMEs, NGOs & Enterprise clients nationally.</p><div class="flex flex-wrap gap-3 mt-5"><a href="services.html" class="btn bg-accounting px-5 py-2.5 rounded-full text-sm font-semibold">Accounting</a><a href="technologies.html" class="btn bg-tech px-5 py-2.5 rounded-full text-sm font-semibold">Technologies</a></div></div>
+</div>
+<div class="reveal border border-line rounded-3xl p-6 md:p-8 bg-[#0A0A0A]">
+<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-5">
+<div class="grid md:grid-cols-2 gap-5"><div><label for="name">Full Name *</label><input id="name" name="name" required placeholder="Your name"></div><div><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="you@company.co.za"></div></div>
+<div class="grid md:grid-cols-2 gap-5"><div><label for="org">Organisation</label><input id="org" name="organisation" placeholder="Company / NGO name"></div><div><label for="type">Organisation Type</label><select id="type" name="organisation_type"><option>SME</option><option>NGO / NPO</option><option>Enterprise</option><option>Other</option></select></div></div>
+<div><label for="service">I need help with *</label><select id="service" name="service" required><option>Accounting — Monthly / Compliance</option><option>Accounting — NGO Fund Accounting</option><option>Accounting — Board / Advisory</option><option>Technologies — Website / Web Architecture</option><option>Technologies — Full-Stack / Portal</option><option>Technologies — Systems Integration</option><option>Both — Integrated Finance + Tech</option></select></div>
+<div><label for="message">Tell us about your project *</label><textarea id="message" name="message" rows="5" required placeholder="What are you trying to fix, build, or scale?"></textarea></div>
+<button type="submit" class="btn w-full bg-white text-black py-4 rounded-full font-semibold">Send Message →</button>
+<p class="text-xs text-zinc-500 text-center">Secure via Formspree. Your details are never shared.</p>
+</form>
+</div>
+</section>
+</main>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
