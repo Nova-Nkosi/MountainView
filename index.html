@@ -1,21 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MountainView Group — Accounting + Technologies</title>
-<meta name="description" content="MountainView Group — Accounting and Technologies for SMEs, NGOs and growing businesses in South Africa.">
+<title>MountainView Group - Accounting + Technologies</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-body antialiased">
-
 <div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
-
-<!-- HEADER WITH LOGO -->
 <header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
 <a href="index.html" class="flex items-center gap-3">
 <img src="logo.png" alt="MountainView Group" class="h-10 md:h-12 w-auto">
@@ -25,99 +20,61 @@
 <a href="index.html" class="text-white">Home</a>
 <a href="accounting.html">Accounting</a>
 <a href="technologies.html">Technologies</a>
-<a href="sme-ngo.html">SMEs & NGOs</a>
+<a href="sme-ngo.html">SMEs and NGOs</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-3">
 <a href="login.html" class="hidden md:inline-flex border border-line px-5 py-2.5 rounded-full text-sm">Client Login</a>
-<a href="contact.html" class="hidden md:inline-flex bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold">Get a Quote →</a>
-<button id="menuBtn" class="md:hidden text-2xl px-2">☰</button>
+<a href="contact.html" class="hidden md:inline-flex bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold">Get a Quote</a>
+<button id="menuBtn" class="md:hidden text-2xl px-2">Menu</button>
 </div>
 </header>
-
-<!-- MOBILE MENU -->
-<div id="overlay" class="fixed inset-0 z-50 bg-black/95 backdrop-blur p-6 flex-col">
-<div class="flex justify-between items-center">
-<span class="font-display font-black text-xl">MOUNTAINVIEW GROUP</span>
-<button id="closeBtn" class="text-3xl">×</button>
-</div>
+<div id="overlay" class="fixed inset-0 z-50 bg-black/95 p-6 flex-col">
+<div class="flex justify-between items-center"><span class="font-display font-black text-xl">MOUNTAINVIEW GROUP</span><button id="closeBtn" class="text-3xl">X</button></div>
 <nav class="flex flex-col gap-5 mt-10 text-2xl font-display font-bold">
-<a href="index.html">Home</a>
-<a href="accounting.html">Accounting</a>
-<a href="technologies.html">Technologies</a>
-<a href="sme-ngo.html">SMEs & NGOs</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="login.html" class="text-zinc-400 text-lg mt-4">Client Login →</a>
+<a href="index.html">Home</a><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html" class="text-zinc-400 text-lg mt-4">Client Login</a>
 </nav>
 </div>
-
 <main class="relative z-10">
-
-<!-- HERO -->
 <section class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-20 pb-16">
-<p class="text-xs tracking-[0.3em] text-zinc-400 uppercase reveal">Accounting • Technologies • South Africa</p>
-<h1 class="font-display font-black text-[13vw] md:text-[84px] leading-[0.9] mt-6 reveal">NUMBERS<br><span class="font-editorial italic font-normal">that</span> BUILD.<br>TECH <span class="font-editorial italic font-normal">that</span> SCALES.</h1>
-<p class="text-zinc-400 max-w-xl mt-6 leading-relaxed reveal">MountainView Group helps SMEs, NGOs and growing businesses stay compliant, organised and digital — monthly books, SARS, donor reporting, websites, portals and systems.</p>
+<p class="text-xs tracking-[0.3em] text-zinc-400 uppercase reveal">Accounting - Technologies - South Africa</p>
+<h1 class="font-display font-black text-[13vw] md:text-[84px] leading-[0.9] mt-6 reveal">NUMBERS<br>THAT BUILD.<br>TECH THAT SCALES.</h1>
+<p class="text-zinc-400 max-w-xl mt-6 leading-relaxed reveal">MountainView Group helps SMEs, NGOs and growing businesses stay compliant, organised and digital. Monthly books, SARS, donor reporting, websites, portals and systems.</p>
 <div class="flex flex-wrap gap-3 mt-8 reveal">
-<a href="accounting.html" class="bg-white text-black px-7 py-4 rounded-full font-semibold">Explore Accounting →</a>
-<a href="technologies.html" class="border border-line px-7 py-4 rounded-full">Explore Technologies →</a>
+<a href="accounting.html" class="bg-white text-black px-7 py-4 rounded-full font-semibold">Explore Accounting</a>
+<a href="technologies.html" class="border border-line px-7 py-4 rounded-full">Explore Technologies</a>
 </div>
 <div class="flex flex-wrap gap-2 mt-8 reveal">
 <span class="border border-line px-4 py-2 rounded-full text-sm">Monthly Bookkeeping</span>
 <span class="border border-line px-4 py-2 rounded-full text-sm">SARS / VAT / PAYE</span>
 <span class="border border-line px-4 py-2 rounded-full text-sm">NGO Fund Accounting</span>
-<span class="border border-line px-4 py-2 rounded-full text-sm">Websites & Portals</span>
+<span class="border border-line px-4 py-2 rounded-full text-sm">Websites and Portals</span>
 </div>
 </section>
-
-<!-- TWO DIVISIONS -->
 <section class="max-w-7xl mx-auto px-5 md:px-8 pb-16 grid md:grid-cols-2 gap-5">
-<a href="accounting.html" class="reveal border border-line rounded-3xl p-8 bg-[#0A0A0A] hover:border-white/30 transition block">
-<p class="text-xs tracking-[0.3em] text-violet-300">01 — ACCOUNTING</p>
-<h2 class="font-display font-black text-3xl md:text-4xl mt-4 leading-tight">Clarity for every rand.</h2>
-<p class="text-zinc-400 mt-3 leading-relaxed">Monthly books, management reports, SARS compliance and donor-ready NGO accounts. No chaos at year-end.</p>
-<p class="mt-6 font-semibold">Explore Accounting →</p>
-</a>
-<a href="technologies.html" class="reveal border border-line rounded-3xl p-8 bg-[#0A0A0A] hover:border-white/30 transition block">
-<p class="text-xs tracking-[0.3em] text-blue-300">02 — TECHNOLOGIES</p>
-<h2 class="font-display font-black text-3xl md:text-4xl mt-4 leading-tight">Systems that work for you.</h2>
-<p class="text-zinc-400 mt-3 leading-relaxed">Corporate websites, client portals, and simple systems that save time and make your business look serious.</p>
-<p class="mt-6 font-semibold">Explore Technologies →</p>
-</a>
+<a href="accounting.html" class="reveal border border-line rounded-3xl p-8 bg-[#0A0A0A] block"><p class="text-xs tracking-[0.3em] text-violet-300">01 - ACCOUNTING</p><h2 class="font-display font-black text-3xl md:text-4xl mt-4">Clarity for every rand.</h2><p class="text-zinc-400 mt-3">Monthly books, management reports, SARS compliance and donor-ready NGO accounts. No chaos at year-end.</p><p class="mt-6 font-semibold">Explore Accounting</p></a>
+<a href="technologies.html" class="reveal border border-line rounded-3xl p-8 bg-[#0A0A0A] block"><p class="text-xs tracking-[0.3em] text-blue-300">02 - TECHNOLOGIES</p><h2 class="font-display font-black text-3xl md:text-4xl mt-4">Systems that work for you.</h2><p class="text-zinc-400 mt-3">Corporate websites, client portals, and simple systems that save time and make your business look serious.</p><p class="mt-6 font-semibold">Explore Technologies</p></a>
 </section>
-
-<!-- WHY US -->
 <section class="max-w-7xl mx-auto px-5 md:px-8 pb-16">
 <h2 class="font-display font-black text-3xl md:text-5xl reveal">One partner. Two strengths.</h2>
 <div class="grid md:grid-cols-3 gap-5 mt-8">
-<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Built for SMEs & NGOs</h3><p class="text-zinc-400 mt-2 text-sm leading-relaxed">We understand small teams, donor funding, and tight budgets. Practical, not corporate-heavy.</p></div>
-<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Compliant, always</h3><p class="text-zinc-400 mt-2 text-sm leading-relaxed">SARS, VAT, PAYE, CIPC and donor reporting — handled on time, every month.</p></div>
-<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Digital from day one</h3><p class="text-zinc-400 mt-2 text-sm leading-relaxed">Your numbers and your website in one place. Clean reports, clean online presence.</p></div>
+<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Built for SMEs and NGOs</h3><p class="text-zinc-400 mt-2 text-sm">We understand small teams, donor funding, and tight budgets. Practical, not corporate-heavy.</p></div>
+<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Compliant, always</h3><p class="text-zinc-400 mt-2 text-sm">SARS, VAT, PAYE, CIPC and donor reporting. Handled on time, every month.</p></div>
+<div class="reveal border border-line rounded-3xl p-7 bg-[#0A0A0A]"><h3 class="font-display font-bold text-xl">Digital from day one</h3><p class="text-zinc-400 mt-2 text-sm">Your numbers and your website in one place. Clean reports, clean online presence.</p></div>
 </div>
 </section>
-
-<!-- CTA -->
 <section class="max-w-7xl mx-auto px-5 md:px-8 pb-24">
-<div class="reveal border border-line rounded-3xl p-8 md:p-12 bg-white text-black flex flex-col md:flex-row justify-between gap-6 items-start md:items-center">
-<div><h2 class="font-display font-black text-3xl md:text-5xl leading-none">Ready to get<br>organised?</h2><p class="mt-3 text-zinc-600">Tell us what you need — Accounting, Technologies, or both.</p></div>
-<a href="contact.html" class="bg-black text-white px-8 py-4 rounded-full font-semibold">Get a Quote →</a>
-</div>
+<div class="reveal border border-line rounded-3xl p-8 md:p-12 bg-white text-black flex flex-col md:flex-row justify-between gap-6 items-start md:items-center"><div><h2 class="font-display font-black text-3xl md:text-5xl">Ready to get organised?</h2><p class="mt-3 text-zinc-600">Tell us what you need. Accounting, Technologies, or both.</p></div><a href="contact.html" class="bg-black text-white px-8 py-4 rounded-full font-semibold">Get a Quote</a></div>
 </section>
-
 </main>
-
-<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs & NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html">Client Login</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
-
-<!-- CHATBOT -->
-<button id="chatToggle" class="fixed bottom-5 right-5 z-50 bg-white text-black w-14 h-14 rounded-full font-bold shadow-xl">💬</button>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="accounting.html">Accounting</a><a href="technologies.html">Technologies</a><a href="sme-ngo.html">SMEs and NGOs</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html">Client Login</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<button id="chatToggle" class="fixed bottom-5 right-5 z-50 bg-white text-black w-14 h-14 rounded-full font-bold shadow-xl">Chat</button>
 <div id="chatWindow" class="hidden fixed bottom-24 right-5 z-50 w-[320px] max-w-[calc(100vw-40px)] bg-[#0A0A0A] border border-line rounded-3xl overflow-hidden">
-<div class="p-4 border-b border-line"><p class="font-display font-bold">MountainView Assistant</p><p class="text-xs text-zinc-400">Replies instantly • Accounting or Technologies?</p></div>
+<div class="p-4 border-b border-line"><p class="font-display font-bold">MountainView Assistant</p><p class="text-xs text-zinc-400">Replies instantly - Accounting or Technologies?</p></div>
 <div id="chatMessages" class="p-4 h-64 overflow-y-auto space-y-3 flex flex-col"><div class="bg-zinc-800 px-4 py-2 rounded-2xl max-w-[80%] text-sm">Hi! Welcome to MountainView Group. Are you looking for Accounting or Technologies?</div></div>
 <form id="chatForm" class="flex gap-2 p-3 border-t border-line"><input id="chatInput" class="flex-1 bg-zinc-900 border border-line rounded-full px-4 py-2 text-sm outline-none" placeholder="Type a message..."><button class="bg-white text-black px-4 rounded-full text-sm font-semibold">Send</button></form>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
