@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Config (Your Brand Colors) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#121212',
+                            offblack: '#1a1a1a',
+                            purple: '#4C1D95',
+                            purplehover: '#6D28D9',
+                            gray: '#a3a3a3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-    <!-- CRISP CHAT BOT (Neo) -->
+    <!-- Crisp Chat Bot (Neo) -->
     <script type="text/javascript">
         window.$crisp=[];
         window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";
@@ -26,149 +48,133 @@
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
     </script>
+
+    <!-- Custom CSS for the Watermark -->
+    <style>
+        .watermark-bg {
+            background-image: url('logo.jpg'); /* Using your actual file name */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 0.03;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
 
     <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <!-- REPLACE WITH YOUR ACTUAL LOGO FILENAME -->
-            <img src="YOUR_LOGO_URL.png" alt="MountainView Group Logo" class="logo-img">
-            <span class="logo-text">MOUNTAINVIEW<span class="text-purple">GROUP</span></span>
-        </div>
+    <nav class="fixed w-full top-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 px-[5%] py-5 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <img src="logo.jpg" alt="MountainView Group Logo" class="h-10 w-auto">
+            <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+        </a>
         
         <!-- Desktop Links -->
-        <div class="nav-links">
-            <a href="#the-firm" class="nav-link">The Firm</a>
-            <a href="#sme-advisory" class="nav-link">SME Advisory</a>
-            <a href="#ngo-compliance" class="nav-link">NGO Compliance</a>
-            <a href="#client-solutions" class="nav-link">Client Solutions</a>
-            <a href="#digital" class="nav-link">Digital & Web</a>
-            <a href="#contact" class="btn btn-primary nav-btn">Contact Us</a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="who-we-are.html" class="hover:text-brand-purple transition-colors duration-300">The Firm</a>
+            <a href="smes-ngos.html" class="hover:text-brand-purple transition-colors duration-300">SME & NGO</a>
+            <a href="services.html" class="hover:text-brand-purple transition-colors duration-300">Services</a>
+            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
         </div>
 
-        <!-- Hamburger Icon (Mobile Only) -->
-        <button class="hamburger" id="hamburger-btn" aria-label="Open Menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="hamburger-btn" class="md:hidden z-50 flex flex-col gap-1.5 w-8" aria-label="Open Menu">
+            <span class="block h-0.5 w-full bg-white rounded-full"></span>
+            <span class="block h-0.5 w-full bg-white rounded-full"></span>
+            <span class="block h-0.5 w-full bg-white rounded-full"></span>
         </button>
     </nav>
 
     <!-- FULL SCREEN MOBILE MENU OVERLAY -->
-    <div class="mobile-menu" id="mobile-menu">
-        <button class="close-btn" id="close-btn" aria-label="Close Menu">&times;</button>
-        <div class="mobile-menu-links">
-            <a href="#the-firm" class="mobile-link">The Firm</a>
-            <a href="#sme-advisory" class="mobile-link">SME Advisory</a>
-            <a href="#ngo-compliance" class="mobile-link">NGO Compliance</a>
-            <a href="#client-solutions" class="mobile-link">Client Solutions</a>
-            <a href="#digital" class="mobile-link">Digital & Web</a>
-            <a href="#contact" class="btn btn-primary mobile-contact-btn">Contact Us</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-400 ease-in-out">
+        <button id="close-btn" class="absolute top-6 right-[5%] text-5xl text-white hover:text-brand-purple transition-colors">&times;</button>
+        <div class="flex flex-col items-center gap-8">
+            <a href="who-we-are.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">The Firm</a>
+            <a href="smes-ngos.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">SME & NGO</a>
+            <a href="services.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple transition-all duration-300 hover:scale-105">Services</a>
+            <a href="contact.html" class="mobile-link mt-4 bg-brand-purple hover:bg-brand-purplehover text-white px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
         </div>
     </div>
 
     <!-- HERO SECTION -->
-    <section class="hero" id="the-firm">
-        <div class="hero-content">
-            <p class="pre-heading">MOUNTAINVIEW GROUP • SOUTH AFRICA</p>
-            <h1 class="main-heading">
-                Boutique Accounting.<br>
-                Absolute Clarity.
-            </h1>
-            <h2 class="sub-heading">Clear. Compliant. In control.</h2>
-            <p class="hero-text">
-                A premium accounting practice tailored for Small and Medium Enterprises (SMEs) and Non-Profit Organisations. We manage your financial reporting, tax obligations, and statutory compliance with precision so you can focus entirely on scaling your business or driving your mission.
-            </p>
-            
-            <div class="button-group">
-                <a href="#contact" class="btn btn-primary">Request a Consultation</a>
-                <a href="#client-solutions" class="btn btn-outline">Explore Our Solutions</a>
-            </div>
+    <section id="the-firm" class="pt-40 pb-20 px-[5%] max-w-5xl mx-auto relative">
+        <p class="text-brand-purple font-semibold tracking-[2px] text-sm mb-6 uppercase">MOUNTAINVIEW GROUP • SOUTH AFRICA</p>
+        <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-4">
+            Boutique Accounting.<br>
+            Absolute Clarity.
+        </h1>
+        <h2 class="text-2xl md:text-4xl font-medium text-brand-purple mb-8">Clear. Compliant. In control.</h2>
+        <p class="text-lg md:text-xl text-brand-gray max-w-2xl mb-12 leading-relaxed">
+            A premium accounting practice tailored for Small and Medium Enterprises (SMEs) and Non-Profit Organisations. We manage your financial reporting, tax obligations, and statutory compliance with precision so you can focus entirely on scaling your business or driving your mission.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-8 py-4 rounded-full font-bold text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-purple/40">Request a Consultation</a>
+            <a href="services.html" class="border-2 border-white hover:border-brand-purple hover:text-brand-purple text-white px-8 py-4 rounded-full font-bold text-center transition-all duration-300 transform hover:-translate-y-1">Explore Our Services</a>
         </div>
     </section>
 
     <!-- SME SECTION -->
-    <section id="sme-advisory" class="split-section dark-bg">
-        <div class="split-content">
-            <h2>For Enterprises & SMEs</h2>
-            <h3 class="text-purple">Build your business on a solid financial foundation.</h3>
-            <p>From day-to-day bookkeeping to strategic tax planning and payroll, we provide the financial infrastructure your business needs to grow with confidence. No jargon. Just accurate, actionable financial data.</p>
-            <a href="#contact" class="btn btn-outline">SME Advisory Solutions &rarr;</a>
+    <section id="sme-advisory" class="py-24 px-[5%] bg-brand-black">
+        <div class="max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Enterprises & SMEs</h2>
+            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">Build your business on a solid financial foundation.</h3>
+            <p class="text-lg text-brand-gray mb-8 max-w-3xl">From day-to-day bookkeeping to strategic tax planning and payroll, we provide the financial infrastructure your business needs to grow with confidence. No jargon. Just accurate, actionable financial data.</p>
+            <a href="contact.html" class="inline-block border-2 border-white hover:border-brand-purple hover:text-brand-purple px-8 py-3 rounded-full font-bold transition-all duration-300">SME Advisory Solutions &rarr;</a>
         </div>
     </section>
 
-    <!-- NGO SECTION -->
-    <section id="ngo-compliance" class="split-section watermark-section">
-        <div class="watermark-overlay"></div>
-        <div class="split-content relative-z">
-            <h2>For Non-Profit Organisations</h2>
-            <h3 class="text-purple">You run the mission. We protect the compliance.</h3>
-            <p>The non-profit sector demands absolute transparency. We handle your fund accounting, donor reporting, and NPO regulatory compliance so your board has complete peace of mind and your team can focus on impact.</p>
-            <a href="#contact" class="btn btn-primary">NGO Compliance Services &rarr;</a>
+    <!-- NGO SECTION (Watermark) -->
+    <section id="ngo-compliance" class="py-24 px-[5%] bg-brand-offblack relative overflow-hidden">
+        <div class="absolute inset-0 watermark-bg z-0"></div>
+        <div class="relative z-10 max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">For Non-Profit Organisations</h2>
+            <h3 class="text-2xl text-brand-purple mb-6 font-semibold">You run the mission. We protect the compliance.</h3>
+            <p class="text-lg text-brand-gray mb-8 max-w-3xl">The non-profit sector demands absolute transparency. We handle your fund accounting, donor reporting, and NPO regulatory compliance so your board has complete peace of mind and your team can focus on impact.</p>
+            <a href="contact.html" class="inline-block bg-brand-purple hover:bg-brand-purplehover text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-brand-purple/30">NGO Compliance Services &rarr;</a>
         </div>
     </section>
 
-    <!-- SERVICES SECTION (Client Solutions) -->
-    <section id="client-solutions" class="services-section">
-        <div class="section-header">
-            <h2>Client Solutions</h2>
-        </div>
-        <div class="grid-container">
-            <div class="service-card">
-                <h3>Financial Reporting</h3>
-                <p>Accurate, real-time financial data. We maintain your ledgers so you always know exactly where you stand.</p>
-            </div>
-            <div class="service-card">
-                <h3>Tax & Compliance</h3>
-                <p>Proactive tax planning and meticulous SARS submissions. We ensure you meet every deadline, avoiding penalties and stress.</p>
-            </div>
-            <div class="service-card">
-                <h3>Payroll Support</h3>
-                <p>Streamlined payroll processing and administrative support, ensuring your team is paid accurately and on time.</p>
+    <!-- CLIENT SOLUTIONS (Grid) -->
+    <section id="client-solutions" class="py-24 px-[5%] bg-brand-offblack">
+        <h2 class="text-4xl font-bold mb-12">Client Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
+                <h3 class="text-2xl font-semibold mb-4">Financial Reporting</h3>
+                <p class="text-brand-gray">Accurate, real-time financial data. We maintain your ledgers so you always know exactly where you stand.</p>
             </div>
             
-            <!-- DIGITAL & WEB SERVICE CARD -->
-            <div class="service-card" id="digital">
-                <h3>Digital Infrastructure & Web</h3>
-                <p>We design and build secure, scalable front-end and back-end web solutions. From corporate websites to custom web applications, we ensure your digital presence is as robust as your financial foundation.</p>
+            <!-- Card 2 -->
+            <div class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
+                <h3 class="text-2xl font-semibold mb-4">Tax & Compliance</h3>
+                <p class="text-brand-gray">Proactive tax planning and meticulous SARS submissions. We ensure you meet every deadline, avoiding penalties and stress.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-        <div class="contact-content">
-            <h2>Let's discuss your requirements.</h2>
-            <p>Submit an enquiry and a member of our team will be in touch.</p>
             
-            <!-- FORMSPREE FORM -->
-            <form action="https://formspree.io/f/mnpdworp" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary full-width-btn">Submit Enquiry</button>
-            </form>
+            <!-- Card 3 -->
+            <div class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
+                <h3 class="text-2xl font-semibold mb-4">Payroll Support</h3>
+                <p class="text-brand-gray">Streamlined payroll processing and administrative support, ensuring your team is paid accurately and on time.</p>
+            </div>
+            
+            <!-- Card 4 (Digital) -->
+            <div id="digital" class="bg-brand-black p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
+                <h3 class="text-2xl font-semibold mb-4">Digital Infrastructure & Web</h3>
+                <p class="text-brand-gray">We design and build secure, scalable front-end and back-end web solutions. From corporate websites to custom web applications, we ensure your digital presence is as robust as your financial foundation.</p>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="logo-container">
-                <img src="YOUR_LOGO_URL.png" alt="Logo" class="logo-img">
-                <span class="logo-text">MOUNTAINVIEW<span class="text-purple">GROUP</span></span>
+    <footer class="bg-brand-black py-16 px-[5%] text-center border-t border-white/10 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="logo.jpg" alt="Logo" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
             </div>
-            <p>&copy; 2024 MountainView Group. All rights reserved.</p>
+            <p class="text-brand-gray text-sm">&copy; 2024 MountainView Group. All rights reserved.</p>
         </div>
     </footer>
 
@@ -177,20 +183,25 @@
         const hamburgerBtn = document.getElementById('hamburger-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-contact-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        // Toggle Menu
         hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
+            mobileMenu.classList.remove('opacity-0', 'invisible');
+            mobileMenu.classList.add('opacity-100', 'visible');
         });
 
-        closeBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-        });
+        // Close Menu
+        const closeMenu = () => {
+            mobileMenu.classList.remove('opacity-100', 'visible');
+            mobileMenu.classList.add('opacity-0', 'invisible');
+        };
 
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Close menu when a link is clicked
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenu);
         });
     </script>
 </body>
