@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MountainView Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { black: '#121212', offblack: '#1a1a1a', purple: '#4C1D95', purplehover: '#6D28D9', gray: '#a3a3a3' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased min-h-screen">
+    <header class="bg-brand-offblack border-b border-white/10 px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="logo.jpg" alt="Logo" class="h-8 w-auto">
+            <span class="font-bold text-lg">Client Portal</span>
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="index.html" class="text-sm text-brand-gray hover:text-white transition-colors">Logout</a>
+        </div>
+    </header>
+    <main class="p-8 max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Welcome, Client Name</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-offblack p-6 rounded-xl border border-white/5">
+                <h3 class="text-brand-gray text-sm font-semibold mb-2">Latest Financials</h3>
+                <p class="text-2xl font-bold">View Report</p>
+            </div>
+            <div class="bg-brand-offblack p-6 rounded-xl border border-white/5">
+                <h3 class="text-brand-gray text-sm font-semibold mb-2">Tax Deadlines</h3>
+                <p class="text-2xl font-bold">No upcoming</p>
+            </div>
+            <div class="bg-brand-offblack p-6 rounded-xl border border-white/5">
+                <h3 class="text-brand-gray text-sm font-semibold mb-2">Support</h3>
+                <p class="text-2xl font-bold text-brand-purple">Open Ticket</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
