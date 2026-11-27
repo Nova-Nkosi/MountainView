@@ -1,8 +1,99 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Services | MountainView Group</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a href="index.html"><img src="logo.jpg" alt="MountainView Group"></a><button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button><nav id="menu"><a href="who-we-are.html">Who We Are</a><a href="services.html">Services</a><a href="smes-ngos.html">For SMEs & NGOs</a><a href="contact.html" class="btn">Contact Us</a></nav></div></header>
-<section><div class="container"><div class="eyebrow">SERVICES</div><h2>Core Accounting Services</h2><p class="sub">The foundation. Accurate, compliant, and on time.</p><div class="grid"><div class="card"><span class="tag">CORE</span><h3>Bookkeeping</h3><p>Day-to-day books kept clean and up to date. Bank reconciliations, debtors and creditors, monthly records you can rely on.</p></div><div class="card"><span class="tag">CORE</span><h3>Financial Statements</h3><p>Annual and management financial statements prepared properly — ready for management, funders, banks and auditors.</p></div><div class="card"><span class="tag">CORE</span><h3>SARS & Tax Services</h3><p>Tax returns, SARS compliance, and guidance on your tax obligations so you stay compliant and avoid penalties.</p></div><div class="card"><span class="tag">CORE</span><h3>Pre-Audit Checks</h3><p>We review and prepare your books before your audit — so your audit is smoother, faster, and less stressful.</p></div></div>
-<h2 style="margin-top:52px">Additional Services</h2><p class="sub">Beyond accounting — practical support for running your business or NGO.</p><div class="grid3"><div class="card"><h3>Budget Coaching</h3><p>Learn to plan, track and control your money with confidence.</p></div><div class="card"><h3>Small Business Administration</h3><p>Virtual assistant support for admin — documents, follow-ups, filing and day-to-day tasks.</p></div><div class="card"><h3>Inventory Management</h3><p>Track stock, reduce losses, and know what you have and what it costs you.</p></div><div class="card"><h3>Inventory Systems Set Up</h3><p>We set up a simple, workable inventory system — so stock is no longer guesswork.</p></div><div class="card"><h3>Grant Reporting for NGOs</h3><p>Accurate, funder-ready grant reports. Budgets vs actuals and supporting schedules.</p></div><div class="card"><h3>Tender Budget Preparation</h3><p>Professional, realistic tender budgets that help you submit with confidence.</p></div><div class="card"><h3>Database Management</h3><p>Clean, organised databases for clients, members, donors or stock.</p></div></div><a href="contact.html" class="btn" style="margin-top:28px">Enquire About a Service →</a></div></section>
-<footer><div class="container foot-grid"><div><b>MOUNTAINVIEW GROUP</b><p>Boutique accounting firm in South Africa.</p></div><div><b>Menu</b><p><a href="index.html">Home</a><br><a href="who-we-are.html">Who We Are</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p></div><div><b>Contact</b><p>South Africa<br>mountainviewsa.co.za</p></div></div><div class="container small">© 2026 MountainView Group</div></footer>
-<script>document.addEventListener('click',e=>{if(!e.target.closest('header'))document.getElementById('menu').classList.remove('open')})</script></body></html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | MountainView Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { black: '#121212', offblack: '#1a1a1a', purple: '#4C1D95', purplehover: '#6D28D9', gray: '#a3a3a3' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <script type="text/javascript">
+        window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    </script>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full top-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 px-[5%] py-5 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+            <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="who-we-are.html" class="hover:text-brand-purple transition-colors duration-300">The Firm</a>
+            <a href="smes-ngos.html" class="hover:text-brand-purple transition-colors duration-300">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="hover:text-brand-purple transition-colors duration-300">NGO Compliance</a>
+            <a href="services.html" class="text-brand-purple font-semibold transition-colors duration-300">Client Solutions</a>
+            <a href="services.html#digital" class="hover:text-brand-purple transition-colors duration-300">Digital & Web</a>
+            <a href="contact.html" class="bg-brand-purple hover:bg-brand-purplehover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-purple/30">Contact Us</a>
+        </div>
+        <button id="hamburger-btn" class="md:hidden z-50 flex flex-col gap-1.5 w-8"><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span><span class="block h-0.5 w-full bg-white rounded-full"></span></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-400 ease-in-out">
+        <button id="close-btn" class="absolute top-6 right-[5%] text-5xl text-white hover:text-brand-purple">&times;</button>
+        <div class="flex flex-col items-center gap-6">
+            <a href="who-we-are.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">The Firm</a>
+            <a href="smes-ngos.html" class="mobile-link text-3xl font-semibold hover:text-brand-purple">SME Advisory</a>
+            <a href="smes-ngos.html#ngo-section" class="mobile-link text-3xl font-semibold hover:text-brand-purple">NGO Compliance</a>
+            <a href="services.html" class="mobile-link text-3xl font-semibold text-brand-purple">Client Solutions</a>
+            <a href="services.html#digital" class="mobile-link text-3xl font-semibold hover:text-brand-purple">Digital & Web</a>
+            <a href="contact.html" class="mobile-link mt-4 bg-brand-purple text-white px-10 py-4 rounded-full font-bold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="pt-40 pb-24 px-[5%]">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-brand-purple font-semibold tracking-[2px] text-sm mb-6 uppercase">OUR EXPERTISE</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-12">Comprehensive Solutions.</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">Financial Reporting</h3>
+                    <p class="text-brand-gray">Accurate, real-time financial data. We maintain your ledgers so you always know exactly where you stand. Monthly management accounts and year-end financials.</p>
+                </div>
+                <div class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">Tax & Compliance</h3>
+                    <p class="text-brand-gray">Proactive tax planning and meticulous SARS submissions. Provisional tax, income tax returns, and VAT. We ensure you meet every deadline.</p>
+                </div>
+                <div class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">Payroll Support</h3>
+                    <p class="text-brand-gray">Streamlined payroll processing and administrative support. Payslips, EMP201 submissions, UIF, and Workman's Compensation.</p>
+                </div>
+                <div id="digital" class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">Digital Infrastructure & Web</h3>
+                    <p class="text-brand-gray">We design and build secure, scalable front-end and back-end web solutions. From corporate websites to custom web applications.</p>
+                </div>
+                <div class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">Company Secretarial</h3>
+                    <p class="text-brand-gray">CIPC registrations, annual returns, and maintaining your statutory registers. Ensuring your corporate structure remains in good standing.</p>
+                </div>
+                <div class="bg-brand-offblack p-10 rounded-xl border border-white/5 hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4">NGO Fund Accounting</h3>
+                    <p class="text-brand-gray">Specialized reporting for the non-profit sector. Tracking donor funds, compliance with NPO regulations, and transparent board reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-16 px-[5%] text-center border-t border-white/10 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="logo.jpg" alt="MountainView Group" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-wide">MOUNTAINVIEW<span class="text-brand-purple">GROUP</span></span>
+            </div>
+            <p class="text-brand-gray text-sm">&copy; 2024 MountainView Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn'); const closeBtn = document.getElementById('close-btn'); const mobileMenu = document.getElementById('mobile-menu'); const mobileLinks = document.querySelectorAll('.mobile-link');
+        hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.remove('opacity-0', 'invisible'); mobileMenu.classList.add('opacity-100', 'visible'); });
+        const closeMenu = () => { mobileMenu.classList.remove('opacity-100', 'visible'); mobileMenu.classList.add('opacity-0', 'invisible'); };
+        closeBtn.addEventListener('click', closeMenu); mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>
