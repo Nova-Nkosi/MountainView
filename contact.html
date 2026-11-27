@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | MountainView Group</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a href="index.html"><img src="logo.jpg" alt="MountainView Group"></a><button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button><nav id="menu"><a href="who-we-are.html">Who We Are</a><a href="services.html">Services</a><a href="smes-ngos.html">For SMEs & NGOs</a><a href="contact.html" class="btn">Contact Us</a></nav></div></header>
-<section><div class="container split"><div><div class="eyebrow">CONTACT</div><h2>Let's talk about your business or NGO.</h2><p class="sub">Send us a message and we'll get back to you. Tell us if you're an SME or an NGO, and what you need help with.</p><p style="margin-top:16px"><b>Location:</b> South Africa<br><b>Website:</b> www.mountainviewsa.co.za</p></div><div class="form-wrap"><h3>Send an Enquiry</h3><form action="https://formspree.io/f/mnpdworp" method="POST"><label>Your Name *</label><input type="text" name="name" required placeholder="Full name"><label>Email *</label><input type="email" name="email" required placeholder="Your email"><label>Organisation</label><input type="text" name="organisation" placeholder="Business / NGO name"><label>You are a...</label><select name="type"><option>SME / Small Business</option><option>NGO</option><option>Other</option></select><label>What do you need help with?</label><select name="service"><option>Bookkeeping</option><option>Financial Statements</option><option>SARS & Tax Services</option><option>Pre-Audit Checks</option><option>Budget Coaching</option><option>Small Business Administration (Virtual Assistant)</option><option>Inventory Management</option><option>Inventory Systems Set Up</option><option>Grant Reporting for NGOs</option><option>Tender Budget Preparation</option><option>Database Management</option><option>Other / Not sure yet</option></select><label>Message *</label><textarea name="message" required placeholder="Tell us a bit about what you need..."></textarea><button type="submit" class="btn" style="width:100%;margin-top:16px">Send Enquiry →</button></form></div></div></section>
-<footer><div class="container foot-grid"><div><b>MOUNTAINVIEW GROUP</b><p>Boutique accounting firm in South Africa.</p></div><div><b>Menu</b><p><a href="index.html">Home</a><br><a href="who-we-are.html">Who We Are</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p></div><div><b>Contact</b><p>South Africa<br>mountainviewsa.co.za</p></div></div><div class="container small">© 2026 MountainView Group</div></footer>
-<script>document.addEventListener('click',e=>{if(!e.target.closest('header'))document.getElementById('menu').classList.remove('open')})</script></body></html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- PASTE THE EXACT SAME <head> SECTION FROM INDEX.HTML HERE -->
+</head>
+<body class="bg-brand-black text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- PASTE THE EXACT SAME <nav> SECTION FROM INDEX.HTML HERE -->
+    <!-- PASTE THE EXACT SAME <div id="mobile-menu"> SECTION FROM INDEX.HTML HERE -->
+
+    <!-- CONTACT SECTION -->
+    <section class="pt-40 pb-24 px-[5%] bg-white text-brand-black min-h-screen">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Let's discuss your requirements.</h2>
+            <p class="text-gray-600 mb-10 text-lg">Submit an enquiry and a member of our team will be in touch.</p>
+            
+            <!-- FORMSPREE FORM -->
+            <form action="https://formspree.io/f/mnpdworp" method="POST" class="text-left space-y-6">
+                <div>
+                    <label for="name" class="block font-semibold mb-2 text-sm">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all">
+                </div>
+                <div>
+                    <label for="email" class="block font-semibold mb-2 text-sm">Email</label>
+                    <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all">
+                </div>
+                <div>
+                    <label for="message" class="block font-semibold mb-2 text-sm">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-purple hover:bg-brand-purplehover text-white font-bold py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-purple/30">Submit Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PASTE THE EXACT SAME <footer> SECTION FROM INDEX.HTML HERE -->
+    <!-- PASTE THE EXACT SAME <script> SECTION FROM INDEX.HTML HERE -->
+
+</body>
+</html>
