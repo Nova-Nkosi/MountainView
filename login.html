@@ -1,52 +1,51 @@
+<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Portal Login | MountainView Group</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { bg: '#050505', muted: '#888888', border: '#222222' }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal Login — MountainView Group</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased flex items-center justify-center min-h-screen relative overflow-hidden">
-    
-    <div class="bg-grid"></div>
-    <div class="ambient-light light-white" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; opacity: 0.05;"></div>
-
-    <div class="w-full max-w-md p-8 md:p-12 bg-[#0a0a0a]/90 backdrop-blur-sm rounded-2xl border border-brand-border shadow-2xl relative z-10">
-        <div class="text-center mb-10">
-            <a href="index.html" class="inline-flex flex-col items-center gap-3 mb-6 group">
-                <img src="logo.jpg" alt="MountainView Group Logo" class="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
-                <span class="font-bold text-xl tracking-widest uppercase text-white" style="font-family: 'Outfit', sans-serif;">MountainView Group</span>
-            </a>
-            <h2 class="text-2xl font-bold text-white">Client Portal</h2>
-            <p class="text-brand-muted text-sm mt-2">Secure access for MountainView clients.</p>
-        </div>
-        <form class="space-y-6">
-            <div>
-                <label for="email" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">Email Address</label>
-                <input type="email" id="email" class="input-minimal" placeholder="client@company.com">
-            </div>
-            <div>
-                <label for="password" class="block text-xs font-mono text-brand-muted uppercase tracking-wider mb-2">Password</label>
-                <input type="password" id="password" class="input-minimal" placeholder="••••••••">
-            </div>
-            <button type="button" class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition-all duration-300 mt-4">Sign In</button>
-        </form>
-        <div class="mt-8 text-center">
-            <a href="index.html" class="text-sm text-brand-muted hover:text-white transition-colors">&larr; Return to main site</a>
-        </div>
-    </div>
+<body class="font-body antialiased">
+<div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+<a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
+<a href="contact.html" class="text-sm text-zinc-300 hover:text-white">Need access? Contact us →</a>
+</header>
+<main class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-24 grid md:grid-cols-2 gap-10 items-center">
+<div class="reveal">
+<p class="text-xs tracking-[0.3em] text-zinc-400 uppercase">Client Portal</p>
+<h1 class="font-display font-black leading-[0.95] tracking-tight text-5xl md:text-6xl mt-4">WELCOME<br>BACK.</h1>
+<p class="text-zinc-400 mt-5 leading-relaxed max-w-md">Access your documents, reports, and project updates. One login for Accounting + Technologies.</p>
+<div class="flex gap-3 mt-8"><span class="border border-line rounded-full px-4 py-2 text-xs">Accounting</span><span class="border border-line rounded-full px-4 py-2 text-xs">Technologies</span><span class="border border-line rounded-full px-4 py-2 text-xs">Secure</span></div>
+</div>
+<div class="reveal border border-line rounded-3xl p-6 md:p-8 bg-[#0A0A0A]">
+<h2 class="font-display font-bold text-2xl">Sign in</h2>
+<p class="text-zinc-400 text-sm mt-2">Use the credentials provided by MountainView Group.</p>
+<form id="loginForm" class="space-y-5 mt-7">
+<div><label for="login-email">Email</label><input id="login-email" type="email" required placeholder="you@company.co.za"></div>
+<div><label for="login-password">Password</label><input id="login-password" type="password" required placeholder="••••••••"></div>
+<p id="loginError" class="hidden text-sm text-red-400">Invalid email or password. Please try again.</p>
+<button type="submit" class="btn w-full bg-white text-black py-4 rounded-full font-semibold">Sign In →</button>
+</form>
+<p class="text-xs text-zinc-500 text-center mt-5">Demo: use any email + password to preview the dashboard.<br>Connect to your backend / Supabase Auth to go live.</p>
+</div>
+</main>
+<footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="index.html">Home</a><a href="contact.html">Contact</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
+<script src="script.js"></script>
+<script>
+document.getElementById('loginForm').addEventListener('submit',function(e){
+e.preventDefault();
+var email=document.getElementById('login-email').value.trim();
+var pass=document.getElementById('login-password').value.trim();
+if(!email||!pass){document.getElementById('loginError').classList.remove('hidden');return;}
+localStorage.setItem('mv_user',email);
+window.location.href='dashboard.html';
+});
+</script>
 </body>
 </html>
