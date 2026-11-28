@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — MountainView Group</title>
+<title>Contact - MountainView Group</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ink:'#050505',paper:'#FFFFFF',accounting:'#4C1D95',tech:'#1E3A8A',muted:'#A1A1AA',line:'rgba(255,255,255,0.12)'},fontFamily:{display:['Outfit','sans-serif'],body:['Inter','sans-serif'],editorial:['Georgia','serif']}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-body antialiased">
+<body class="font-body antialiased fade-in">
 <div class="fixed inset-0 overflow-hidden z-0"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
 <header class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
 <a href="index.html" class="font-display font-black tracking-tight text-xl md:text-2xl">MOUNTAINVIEW <span class="font-light">GROUP</span></a>
@@ -46,7 +46,7 @@
 <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-5">
 <div class="grid md:grid-cols-2 gap-5"><div><label for="name">Full Name *</label><input id="name" name="name" required placeholder="Your name"></div><div><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="you@company.co.za"></div></div>
 <div class="grid md:grid-cols-2 gap-5"><div><label for="org">Organisation</label><input id="org" name="organisation" placeholder="Company / NGO name"></div><div><label for="type">Organisation Type</label><select id="type" name="organisation_type"><option>SME</option><option>NGO / NPO</option><option>Enterprise</option><option>Other</option></select></div></div>
-<div><label for="service">I need help with *</label><select id="service" name="service" required><option>Accounting — Monthly / Compliance</option><option>Accounting — NGO Fund Accounting</option><option>Accounting — Board / Advisory</option><option>Technologies — Website / Web Architecture</option><option>Technologies — Full-Stack / Portal</option><option>Technologies — Systems Integration</option><option>Both — Integrated Finance + Tech</option></select></div>
+<div><label for="service">I need help with *</label><select id="service" name="service" required><option>Accounting - Monthly / Compliance</option><option>Accounting - NGO Fund Accounting</option><option>Accounting - Board / Advisory</option><option>Technologies - Website / Web Architecture</option><option>Technologies - Full-Stack / Portal</option><option>Technologies - Systems Integration</option><option>Both - Integrated Finance + Tech</option></select></div>
 <div><label for="message">Tell us about your project *</label><textarea id="message" name="message" rows="5" required placeholder="What are you trying to fix, build, or scale?"></textarea></div>
 <button type="submit" class="btn w-full bg-white text-black py-4 rounded-full font-semibold">Send Message →</button>
 <p class="text-xs text-zinc-500 text-center">Secure via Formspree. Your details are never shared.</p>
@@ -56,5 +56,6 @@
 </main>
 <footer class="relative z-10 border-t border-line"><div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-zinc-500"><p class="text-white font-display font-bold">MOUNTAINVIEW GROUP</p><div class="flex flex-wrap gap-5"><a href="who-we-are.html">Who We Are</a><a href="services.html">Accounting</a><a href="technologies.html">Technologies</a><a href="contact.html">Contact</a><a href="login.html">Portal</a></div><p>© 2026 MountainView Group. All rights reserved.</p></div></footer>
 <script src="script.js"></script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f32d26fa-4728-4ec7-b701-8175384851f5";(function(){var d=document;var s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
