@@ -122,4 +122,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (a.getAttribute('href') === current) a.classList.add('text-white');
   });
 
-}); 
+});
