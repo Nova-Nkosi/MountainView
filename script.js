@@ -1,7 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ========== 1. MOBILE MENU ========== */
   const menuBtn = document.getElementById('menuBtn');
   const closeBtn = document.getElementById('closeBtn');
   const overlay = document.getElementById('overlay');
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (overlay) overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
-  /* ========== 2. REVEAL ON SCROLL ========== */
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
@@ -37,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => el.classList.add('visible'));
   }
 
-  /* ========== 3. SMOOTH ANCHOR SCROLL ========== */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ========== 4. LOGIN (login.html) ========== */
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
     loginForm.addEventListener('submit', e => {
@@ -62,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 5. DASHBOARD (dashboard.html) ========== */
   const userEmailEl = document.getElementById('userEmail');
   const logoutBtn = document.getElementById('logoutBtn');
   const savedUser = localStorage.getItem('mv_user');
@@ -74,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 6. CONTACT FORM SUCCESS MESSAGE ========== */
   const contactForm = document.querySelector('form[action*="formspree"]');
   if (contactForm) {
     contactForm.addEventListener('submit', () => {
@@ -83,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 7. CHATBOT (if you add chatbot.html elements) ========== */
   const chatToggle = document.getElementById('chatToggle');
   const chatWindow = document.getElementById('chatWindow');
   const chatForm = document.getElementById('chatForm');
@@ -107,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function botReply(msg) {
     const m = msg.toLowerCase();
-    if (m.includes('account') || m.includes('book') || m.includes('tax') || m.includes('vat') || m.includes('sars')) return 'For Accounting — monthly books, SARS/VAT/PAYE, and NGO fund accounting. Go to Contact and choose Accounting, we reply within 1 business day.';
-    if (m.includes('website') || m.includes('tech') || m.includes('build') || m.includes('portal')) return 'For Technologies — corporate websites, portals, and systems integration. Go to Contact and choose Technologies.';
+    if (m.includes('account') || m.includes('book') || m.includes('tax') || m.includes('vat') || m.includes('sars')) return 'For Accounting - monthly books, SARS/VAT/PAYE, and NGO fund accounting. Go to Contact and choose Accounting, we reply within 1 business day.';
+    if (m.includes('website') || m.includes('tech') || m.includes('build') || m.includes('portal')) return 'For Technologies - corporate websites, portals, and systems integration. Go to Contact and choose Technologies.';
     if (m.includes('price') || m.includes('cost') || m.includes('quote')) return 'Pricing depends on scope. Send us your details on the Contact page and we will send a tailored quote within 1 business day.';
     if (m.includes('ngo') || m.includes('npo') || m.includes('donor')) return 'For NGOs we do fund accounting, donor reporting, and NPO compliance. See SMEs & NGOs page for details.';
     if (m.includes('hello') || m.includes('hi')) return 'Hello! Welcome to MountainView Group. Are you looking for Accounting or Technologies?';
-    return 'Thanks for your message. For a full answer, please use the Contact page — we reply within 1 business day. Or tell me: Accounting or Technologies?';
+    return 'Thanks for your message. For a full answer, please use the Contact page - we reply within 1 business day. Or tell me: Accounting or Technologies?';
   }
   if (chatForm && chatInput) {
     chatForm.addEventListener('submit', e => {
@@ -125,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ========== 8. ACTIVE NAV HIGHLIGHT ========== */
   const current = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a, #overlay a').forEach(a => {
     if (a.getAttribute('href') === current) a.classList.add('text-white');
