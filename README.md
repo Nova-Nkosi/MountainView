@@ -1,25 +1,20 @@
-
 # MountainView Group Website
 
-A holding entity website for Mountainview Accounting and Mountainview Technologies.
+The official corporate website for MountainView Group. This is a static, multi-page website built with HTML, Tailwind CSS (via CDN), and vanilla JavaScript.
 
-## Tech Stack
-- HTML5
-- Tailwind CSS (via CDN)
-- Vanilla JavaScript
-- Custom CSS for floating tech art, ambient lighting, and scroll-reveal animations
+## Project Structure
 
-## Structure
-- `index.html` - Group Homepage
-- `who-we-are.html` - The Firm / CEO Message
-- `services.html` - Mountainview Accounting Division
-- `technologies.html` - Mountainview Technologies Division
-- `contact.html` - Formspree Contact Form
-- `login.html` - Portal Login
-- `dashboard.html` - Client Dashboard
-- `style.css` - Core styles and animations
-- `script.js` - Interaction logic
-- `logo.jpg` - Brand logo
-
-## Deployment
-Automatically deployed via GitHub Pages. Any changes pushed to the `main` branch will reflect on the live site.
+```text
+/
+├── index.html          # Homepage
+├── services.html       # Accounting Division
+├── technologies.html   # Technologies Division
+├── smes-ngos.html      # SMEs & NGOs Target Audience
+├── who-we-are.html     # About the Firm / Leadership
+├── contact.html        # Contact Form (Formspree)
+├── login.html          # Client Portal Login Page
+├── style.css           # Global Styles & Animations
+├── script.js           # Global JavaScript (Menu, Chatbot, Forms)
+├── logo.jpg            # Company Logo
+├── README.md           # Project Documentation
+├── CNAME               # Custom Domain mapping (mountainviewsa.co.za)
